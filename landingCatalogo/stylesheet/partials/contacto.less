@@ -54,12 +54,27 @@
             padding-left: 1rem;
             width: 40%;
             &#cb1{
-                width: 2%;
-                padding: 0;
                 float: left;
-                margin-left: 8.3%;
-                margin-top: -0.6rem;
                 margin-bottom: 20/16rem;
+                margin-left: 8.3%;
+                margin-top: -1.4rem;
+                padding: 0%;
+                
+            }
+            &[type="checkbox"] {
+               -webkit-appearance: none;
+               -moz-appearance: none ;
+                appearance: none;
+               outline: none;
+                
+            }
+            &[type="checkbox"] {
+                display: block;
+                background: lighten(@mainColor, 100);
+                min-height: 19px;
+                height: 19px;
+                width: 19px;
+                
             }
             
         }
