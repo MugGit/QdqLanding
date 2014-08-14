@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="stylesheet/less" href="stylesheet/main.less">
+    <link href='http://fonts.googleapis.com/css?family=Lato|Playfair+Display' rel='stylesheet' type='text/css'>
+    <!-- Scripts------->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="js/less-1.7.0.min.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+       <div class="mainWrapper">
+        <div class="logo"><h1>Paloma Primera Infancia</h1></div>
+         <nav class="mobileNav">
+           <span class="mobileNavIcon"></span>
+            <ul>
+                <li><a href="" class="active">Portada</a></li>
+                <li><a href="">Con&oacute;cenos</a></li>
+                <li><a href="">Que hacemos</a></li>
+                <li><a href="">Catalogo</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="nav">
+            <ul>
+                <li><a href="" class="active">Portada</a></li>
+                <li><a href="">Con&oacute;cenos</a></li>
+                <li><a href="">Que hacemos</a></li>
+                <li><a href="">Catalogo</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>    
+    </header>
+    <div class="contactWrapper">
+    <section class="contactWithUs">
+       <div class="accordionOpener">
+        <h1 class="contactTitle">contacta con Paloma primera infancia</h1>
+        <h2 class="contactSubTitle">Por correo electr&oacute;nico</h2>
+        <span class="plusSimbol">+</span>
+        </div>
+        <div class="submenu">
+           <div class="mainWrapper">
+            <form action="demo_form.asp" autocomplete="on">
+              <input type="text" name="fname" placeholder="Nombre">
+              <input type="text" name="lname" placeholder="E-mail">
+              <textarea name="comment" form="usrform" placeholder="Comentario"></textarea><br>
+              <input id="cb1" name="cb1" type="checkbox"><label for="cb1">He leido y acepto la Pol&iacute;tica de uso de datos</label>
+              <input type="submit" class="button">
+            </form>
+            </div>
+        </div>
+    </section>
+    <section class="freeCall">
+        <h1 class="contactTitle">Te llamamos gratis</h1>
+        <h2 class="contactSubTitle">D&eacute;janos tu t&eacute;lefono m&oacute;vil o fijo y nosotros te llamamos</h2>
+        <span class="plusSimbol">+</span>
+    </section>
+    <section class="whereRWe">
+        <h1 class="contactTitle">D&oacute;nde estamos</h1>
+        <h2 class="contactSubTitle">C&oacute;mo llegar desde tu ubicaci&oacute;n</h2>
+        <span class="plusSimbol">+</span>
+    </section>
+    </div>
+    <footer class="footer">
+       <div class="mainWrapper">
+        <section class="footerCustomerInfo">
+            <ul>
+                <li>Calle de Abastos, 10 28300 Aranjuez - (Madrid)</li>
+                <li>91 028 20 46 / 665 88 88 88 -</li>
+                <li><a href="">www.clienteweb.es</a></li>
+            </ul>
+        </section>
+        <section class="footerSiteInfoPages">
+           
+            <ul>
+               <li><select name="languages">
+                <option value="espanol">Español</option>
+                <option value="catalan">Catalan</option>
+                <option value="espanol">Español</option>
+                <option value="catalan">Catalan</option>
+     
+                </select></li>
+                <li><a href="">mapa web</a></li>
+                <li><a href="">pol&iacute;tica de cookies</a></li>
+                <li><a href="">aviso legal</a></li>
+                
+            </ul>
+        </section>
+      </div>  
+    </footer>
+<script>
+$('.accordionOpener').bind('click', function(){
+    var $section = jQuery(this).parent();
+    $section.find('.submenu').slideToggle('fast'); 
+    // apply the toggle to the ul
+    $section.toggleClass('is-expanded');
+    if($section.hasClass("is-expanded")){
+        $section.find( "span.plusSimbol" ).html("-");
+    }else{
+        $section.find( "span.plusSimbol" ).html("+");
+    }
+ event.preventDefault();
+});      
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+//Listado Categorias
+
+.listCategory{
+    width: 33.8%;
+    float:left;
+    padding-left: 1rem;
+    @media only screen and (max-width : 600px){
+                width: 100%;
+                padding-left: 0;
+            }
+    
+    .textWithMiddleLine{
+        .titleFont(1.2rem, @mainColor);
+        overflow: hidden;
+        text-align: left;
+        margin-bottom: 2rem;
+        &:after{
+            background-color: darken(@mainColor, 100%);
+            content: "";
+            display: inline-block;
+            height: 0.6rem;
+            left: 1%;
+            margin-right: -100%;
+            position: relative;
+            vertical-align: middle;
+            width: 100%;
+        }
+       
+        
+        }
+            ul{
+        li{
+            float: left;
+            margin: 1rem 1%;
+            line-height: 2rem;
+            a{
+                background: darken(@backgroundColor, 100%);
+                color:@actionColor;
+                padding: 0.5rem;
+                
+                
+            }
+        }
+    }
+}

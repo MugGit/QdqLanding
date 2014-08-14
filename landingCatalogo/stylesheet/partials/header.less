@@ -1,0 +1,28 @@
+//Header
+
+.header{
+    
+    background: @mainColor url("../img/headerBottom.png") repeat-x 0 100%;
+    display: inline-block;
+    min-height:4.25rem; 
+    padding: 2em 0 0;
+    width: 100%;
+    
+    
+    .logo{
+        float: left;
+        .titleFont(1rem, @actionColor);
+        width: 40%;
+        @media screen and (max-width:1200px){
+                    font-size: 80%;
+                    
+                }
+    @media only screen and (max-width : 1024px){
+        width:100%;
+        text-align: center;
+        .titleFont(60%, @actionColor);
+        
+    }
+        
+    }
+}

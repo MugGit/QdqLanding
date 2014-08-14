@@ -1,0 +1,93 @@
+//Contacto
+
+.contactWrapper{
+    section{
+        border-bottom: 1px solid @actionColor;
+        line-height: 2.2rem;
+        min-height: 200/16rem;
+        padding: 6rem 0 0;
+        text-align: center;
+        width: 100%;
+        .contactTitle{
+            float: left;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            width: 100%;;
+        }
+        .contactSubTitle{
+            margin-bottom: 0.5rem;
+        }
+        .accordionOpener{
+            cursor: pointer;
+            
+        }
+        .plusSimbol{
+            color: @actionColor;
+            display: inline-block;
+            font-size: 48px;
+            float: right;
+            position: relative;
+            text-align: right;
+            top: -4rem;
+            right: 8%;
+            width:  100%;
+            @media screen and (max-width:1024px){
+                display: none;
+            }
+        }
+    }
+    
+}
+
+.submenu{
+    background: lighten(@actionColor, 40);
+    display: none;
+    min-height: 276/16rem;
+    padding-bottom: 1rem;
+    form{
+        padding-top:50/16rem;
+        width: 100%;
+        input{
+            border: none;
+            min-height: 35/16rem;
+            margin: 0 0.5%;
+            padding-left: 1rem;
+            width: 40%;
+            &#cb1{
+                width: 2%;
+                padding: 0;
+                float: left;
+                margin-left: 8.3%;
+                margin-top: -0.6rem;
+                margin-bottom: 20/16rem;
+            }
+            
+        }
+        label{
+                float: left;
+                position: relative;
+                top: -1.5rem;
+            }
+        textarea{
+            border: none;
+            margin: 22/16rem 0;
+            min-height: 90/16rem;
+            padding: 1rem;
+            width: 81.4%;
+        }
+        .button{
+            .button(relative, 10%);
+            float: right;
+            right: 7.7%;
+            top: -1.4rem;
+//            float: right;
+            @media screen and (max-width:1024px){
+            .button(relative, 85%);
+            float: none;
+            margin: -1rem 0 0rem;
+            right: 0;
+            }
+        }
+        
+        }
+    }

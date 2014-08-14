@@ -1,0 +1,34 @@
+@import "modules/allModules";
+@import "partials/allPartials";
+    
+body{
+        background: @backgroundColor;
+        .bodyFont();
+        color: @mainColor;
+        h1{font-size: 30/16rem;}
+        h2{font-size: 20/16rem;}
+    }
+.mainWrapper{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+.mainWrapperTextSection{
+    width: 100%;
+    display: inline-block;
+    padding: 2rem 0;
+    min-height: 25.7vh;
+    @media only screen and (max-width: 600px){
+    width:95%;
+    padding: 1rem 2%;
+    text-align: justify;
+    }
+}
+.fullBackground{
+    clear: both;
+    width: 100%;
+    background: lighten(@backgroundColor, 100%);
+    margin-top: 0.9rem;
+    max-resolution: -0.4rem;
+
+}
