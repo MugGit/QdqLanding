@@ -1,26 +1,31 @@
 //MobileNav
 
+.show{
+    display: block!important;
+}
 
 .mobileNav{
     @media screen and (min-width:1024px){display: none;}
     @media screen and (max-width:1024px){
     ul{
         background: fade(@actionColor, 90);
-        display: block;
-        right: 1rem;
-        margin: 2.1rem auto;
+        display: none;
+        margin: 2.1rem 0;
         position: absolute;
-        width: 30%;
+        width: 100%;
         z-index: 5;
         li{
-            display: block;
             border-bottom: 1px solid fade(lighten(@actionColor, 20),80);
+            display: block;
+            text-align: center;
             a{
-            line-height: 3rem;
-            padding: 1rem;
-            width: 100%;
             color: darken(@mainColor, 100);
             font-size: 1.2rem;
+            line-height: 3rem;
+            padding: 1rem;
+            text-align: center;    
+            width: 100%;
+            
             }
         }
         
@@ -31,6 +36,7 @@
         background-color: #a0a74a;
         background-position: center;
         background-repeat: no-repeat;
+        cursor: pointer;
         display: inline-block;
         position: absolute;
         top: 1rem;

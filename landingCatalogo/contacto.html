@@ -2,21 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto</title>
+    <title>Landing Catalogo</title>
     <link rel="stylesheet/less" href="stylesheet/main.less">
     <link href='http://fonts.googleapis.com/css?family=Lato|Playfair+Display' rel='stylesheet' type='text/css'>
     <!-- Scripts------->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 <script src="js/less-1.7.0.min.js"></script>
+<script src="js/ScriptQdq.js"></script>
     
 </head>
 <body>
     <header class="header">
-       <div class="mainWrapper">
-        <div class="logo"><h1>Paloma Primera Infancia</h1></div>
-         <nav class="mobileNav">
+      <nav class="mobileNav">
            <span class="mobileNavIcon"></span>
-            <ul>
+            <ul class="navItems">
                 <li><a href="" class="active">Portada</a></li>
                 <li><a href="">Con&oacute;cenos</a></li>
                 <li><a href="">Que hacemos</a></li>
@@ -25,7 +24,9 @@
                 <li><a href="">Contacto</a></li>
             </ul>
         </nav>
-        <nav class="nav">
+       <div class="mainWrapper">
+        <div class="logo"><h1>Paloma Primera Infancia</h1></div>
+         <nav class="nav">
             <ul>
                 <li><a href="" class="active">Portada</a></li>
                 <li><a href="">Con&oacute;cenos</a></li>
@@ -46,7 +47,7 @@
         </div>
         <div class="submenu">
            <div class="mainWrapper">
-            <form action="demo_form.asp" autocomplete="on">
+            <form action="demo_form.asp" autocomplete="on" class="contactByMail">
               <input type="text" name="fname" placeholder="Nombre">
               <input type="text" name="lname" placeholder="E-mail">
               <textarea name="comment" form="usrform" placeholder="Comentario"></textarea><br>
@@ -61,23 +62,50 @@
         <h1 class="contactTitle">Te llamamos gratis</h1>
         <h2 class="contactSubTitle">D&eacute;janos tu t&eacute;lefono m&oacute;vil o fijo y nosotros te llamamos</h2>
         <span class="plusSimbol">+</span>
+        </div>
         <div class="submenu">
            <div class="mainWrapper">
-            <form action="demo_form.asp" autocomplete="on">
-              <input type="text" name="fname" placeholder="Nombre">
-              <input type="text" name="lname" placeholder="E-mail">
-              <textarea name="comment" form="usrform" placeholder="Comentario"></textarea><br>
-              <input id="cb1" name="cb1" type="checkbox"><label for="cb1">He leido y acepto la Pol&iacute;tica de uso de datos</label>
-              <input type="submit" class="button">
-            </form>
+          <form action="">
+              <input type="radio" name="language"> Espa&ntilde;ol</input>
+              <input type="radio" name="language"> Catalan</input>
+              <input type="tel" name="userTelephone" placeholder="Tu numero de telefono" class="userTelephone">
+              <input type="submit" value="Enviar" class="button"></input>
+              <p class="freeCallMessage">* Su número de teléfono no aparecerá reflejado en el teléfono del profesional solicitado</p>
+          </form>
             </div>
         </div>
     </section>
     <section class="whereRWe">
+       <div class="accordionOpener">
         <h1 class="contactTitle">D&oacute;nde estamos</h1>
         <h2 class="contactSubTitle">C&oacute;mo llegar desde tu ubicaci&oacute;n</h2>
         <span class="plusSimbol">+</span>
-    </section>
+       </div>
+        <div class="submenu">
+<!--*********Delete this section and replace for google api-->
+          <div class="imgMap">
+           <img src="img/mapa.png" alt="" class="contactMap">
+           </div>
+           <div class="formMap">
+            <form action="" autocomplete="on">
+                <div class="formLeftSide">
+                  <p>Desde:</p>
+                  <input type="text" name="how2go" placeholder="Calle">
+                  <input type="text" name="how2go" placeholder="Localidad">
+                  <input type="text" name="how2go" placeholder="Pais">
+                </div>
+                <div class="formRightSide">
+                  <p>Hasta:</p>
+                  <input type="text" name="how2go" placeholder="Calle">
+                  <input type="text" name="how2go" placeholder="Localidad">
+                  <input type="text" name="how2go" placeholder="Pais">
+                  <input type="submit" class="button" value="Calcular">
+                </div>
+            </form>
+            </div>
+<!--***********Section to delete ends-->
+            </div>
+        </section>
     </div>
     <footer class="footer">
        <div class="mainWrapper">
@@ -106,19 +134,5 @@
         </section>
       </div>  
     </footer>
-<script>
-$('.accordionOpener').bind('click', function(){
-    var $section = jQuery(this).parent();
-    $section.find('.submenu').slideToggle('fast'); 
-    // apply the toggle to the ul
-    $section.toggleClass('is-expanded');
-    if($section.hasClass("is-expanded")){
-        $section.find( "span.plusSimbol" ).html("-");
-    }else{
-        $section.find( "span.plusSimbol" ).html("+");
-    }
- event.preventDefault();
-});      
-</script>
-</body>
+    </body>
 </html>

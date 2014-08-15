@@ -1,0 +1,33 @@
+/*Inhouse js*/
+
+$(document).ready(function(){
+
+//Mobile Nav open-close action
+    
+    $('.mobileNavIcon').bind('click', function(){
+    var $mobileNavVisibility = jQuery(this).parent();
+        $mobileNavVisibility.find('.navItems').toggleClass('show');
+    });
+    
+//Contacto Accordion for each section, this toggle the open-close and change the + - icon.
+    
+    $('.accordionOpener').bind('click', function(){
+        var $section = jQuery(this).parent();
+        if(($section).siblings().hasClass('is-expanded')){
+            
+            $('.submenu').slideUp('fast');
+            $section.siblings().removeClass('is-expanded');
+        };
+        $section.find('.submenu').slideToggle('fast');
+        // apply the toggle to the ul
+        $section.toggleClass('is-expanded');
+        if($section.hasClass("is-expanded")){
+            $section.find( "span.plusSimbol" ).html("-");
+        }else{
+            $section.find( "span.plusSimbol" ).html("+");
+        }
+        event.preventDefault();
+        
+    });//accordionOpener end
+    
+});//Document ready end
