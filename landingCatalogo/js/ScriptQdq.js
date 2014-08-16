@@ -5,7 +5,9 @@ $(document).ready(function(){
 //Mobile Nav open-close action
     
     $('.mobileNavIcon').bind('click', function(){
+        
     var $mobileNavVisibility = jQuery(this).parent();
+        $('.mobileNavIcon').toggleClass('mobileNavIconClose'); 
         $mobileNavVisibility.find('.navItems').toggleClass('show');
     });
     

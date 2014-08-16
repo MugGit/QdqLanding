@@ -10,12 +10,16 @@
                 &[type="radio"] {
                         width: 1%;
                         display: inline;
+                        &:checked + label{
+                            color: @actionColor;
+                        }
                 }
+                
             }
         .button{
                 .button(relative, 7%);
-                right: 24.7%;
-                top: 0;
+                right: 25%;
+                top: 0.1rem;
         }
         .freeCallMessage{
             margin-top: 1rem;
