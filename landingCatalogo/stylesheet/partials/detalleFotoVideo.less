@@ -1,0 +1,121 @@
+//DetalleFotoVideo
+.sideNav{
+    background: @actionColor;
+    display: block;
+    float: left;
+    margin-top: -2rem;
+    min-height: 87.5vh;
+    width: 14%;
+    ul{
+        padding-top: 2rem;
+        width: 100%;
+        li{
+            border-bottom: 1px solid fade(darken(@actionColor, 5), 80);
+            text-align: center;
+            width: 100%;
+            a{
+                color: lighten(@mainColor, 100%);
+                line-height: 3rem;
+                text-transform: uppercase;
+                &.active{color: darken(@mainColor, 100);}
+                &:hover{
+                    color: darken(@mainColor, 100);
+                }
+            }
+        }
+    }
+}
+.mainWrapperWithSideNav{
+    float: left;
+    width: 83.6%;
+    .detailImgVideo{
+        background: darken(@backgroundColor, 10);
+        margin: 1.1rem 2%;
+        padding: 24/16rem;
+        width: 93.9%;
+    }
+.imgVideoDetail{
+    .breadcrumbs{
+        ul{
+            li{
+                float: left;
+                &:first-child{margin-left: 36/16rem;}
+                &:last-child{
+                    a{
+                        &:after{content: "";}
+                    }
+                }
+                a{
+                    color: @actionColor;
+                    &:after{
+                        content: ">";
+                        margin: 0 0.3rem;
+                        vertical-align: middle;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.watchPresentation{
+    float: right;
+    margin-right: 0.5rem;
+    ul{
+        li{
+            float: left;
+            margin: 0 0.5rem;
+            &:first-child:after{
+                    background: @actionColor;
+                    border-radius: 50%;
+                    content: url("../img/presentationIcon.png");
+                    height: 10px;    
+                    line-height: 1em;
+                    margin: 0.5rem;
+                    padding: 0.4rem;
+                    width: 10px;
+                   
+                    
+                }
+            a{
+                color: darken(@mainColor, 100);
+                &.before{
+                    background: @actionColor;
+                    border-radius: 50%;
+                    color: lighten(@mainColor, 100);
+                    display: inline-block;
+                    font-family: @headerFont;
+                    font-size: 80%;
+                    font-weight: 800;
+                    height: 10px;
+                    line-height: 1em;
+                    padding: 0.4rem;
+                    width: 10px;
+                }
+                &.after{
+                    background: @actionColor;
+                    border-radius: 50%;
+                    color: lighten(@mainColor, 100);
+                    display: inline-block;
+                    font-family: @headerFont;
+                    font-size: 80%;
+                    font-weight: 800;
+                    height: 10px;
+                    line-height: 1em;
+                    padding: 0.4rem;
+                    width: 10px;
+                }
+                
+            }
+            .presentation{
+                    &::after{
+                            
+                            width: 10px;
+                            height: 10px;
+                    }
+                }
+            
+        }
+    }
+}
+}

@@ -8,7 +8,7 @@ $(document).ready(function(){
         
     var $mobileNavVisibility = jQuery(this).parent();
         $('.mobileNavIcon').toggleClass('mobileNavIconClose'); 
-        $mobileNavVisibility.find('.navItems').toggleClass('show');
+        $mobileNavVisibility.find('.navItems').toggleClass('show', 1000);
     });
     
 //Contacto Accordion for each section, this toggle the open-close and change the + - icon.
@@ -22,7 +22,7 @@ $(document).ready(function(){
         };
         $section.find('.submenu').slideToggle('fast');
         // apply the toggle to the ul
-        $section.toggleClass('is-expanded');
+        $section.toggleClass('is-expanded', 5000000);
         if($section.hasClass("is-expanded")){
             $section.find( "span.plusSimbol" ).html("-");
         }else{
