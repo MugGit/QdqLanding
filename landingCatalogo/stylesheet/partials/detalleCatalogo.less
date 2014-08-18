@@ -36,7 +36,7 @@
     ul{
         li{
             float: left;
-            margin: 21/16rem;
+            margin: 0.5rem;
         }
     }
     
@@ -57,9 +57,13 @@
     .download{
             p{
                 clear: both;
+                color: fade(darken(@actionColor, 100),40);
+                font-style: italic;
+                margin: 1rem 0;
                 &:first-child{
-                    color:  darken(@actionColor, 100);
+                    
                     font-size: 1.1rem;
+                    font-style: normal;
                     font-weight: 800;
                     line-height: 2.1em;
                 }
@@ -67,6 +71,7 @@
             ul{
                 background-color: lighten(@backgroundColor, 5) ;
                 display: inline-block;
+                line-height: 2rem;
                 width: 100%;
                 li{
                     color: @actionColor;
