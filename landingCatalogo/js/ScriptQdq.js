@@ -13,23 +13,14 @@ $(document).ready(function(){
     
 //Contacto Accordion for each section, this toggle the open-close and change the + - icon.
     
-    $('.accordionOpener').bind('click', function(){
-        var $section = jQuery(this).parent();
-        if(($section).siblings().hasClass('is-expanded')){
-            
-            $('.submenu').slideUp('fast');
-            $section.siblings().removeClass('is-expanded');
-        };
-        $section.find('.submenu').slideToggle('fast');
-        // apply the toggle to the ul
-        $section.toggleClass('is-expanded', 5000000);
-        if($section.hasClass("is-expanded")){
-            $section.find( "span.plusSimbol" ).html("-");
-        }else{
-            $section.find( "span.plusSimbol" ).html("+");
-        }
-        event.preventDefault();
-        
-    });//accordionOpener end
-    
+   $('.accordionOpener').bind('click', function(){
+       var $section=$(this).parents('section'),
+           
+           $wrapper=$section.parents('.contactWrapper');
+            $('.submenu', $wrapper).slideUp('fast');
+            $('.submenu', $section).slideToggle('fast');
+            $("span.plusSimbol", $wrapper).html('+');
+            $("span.plusSimbol", $section).html('-');
+ 
+   });//accordionOpener end
 });//Document ready end

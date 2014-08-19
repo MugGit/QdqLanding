@@ -26,65 +26,149 @@
         }
     }
 
-.fotos{
-    float: left;
-    margin-left: 2.3%;
-    width: 54%;
-    .detailCatalog{
-        width: 100%;
-    }
-    ul{
-        li{
-            float: left;
-            margin: 0.5rem;
-        }
-    }
-    
-    
-}
-.textDetail{
-    float: right;
-    width: 42%;
-    .textDetailTitle{
-        .titleFont(2rem, darken(@mainColor,100));
-    }
-    .textDetailPrice{
-        color:  fade(darken(@actionColor, 100),40);
-        font-size: 1.1rem;
-        font-weight: 800;
-        line-height: 2.1em;
-    }
-    .download{
-            p{
-                clear: both;
-                color: fade(darken(@actionColor, 100),40);
-                font-style: italic;
-                margin: 1rem 0;
-                &:first-child{
-                    
-                    font-size: 1.1rem;
-                    font-style: normal;
-                    font-weight: 800;
-                    line-height: 2.1em;
-                }
-            }
-            ul{
-                background-color: lighten(@backgroundColor, 5) ;
+.Contenedor{
+    display: inline-block;
+    padding: 0 2rem;
+    .fotos2{
+        display: inline-block;
+        float: left;
+        width: 20%;
+        .mainmediafig2{
+            img{
                 display: inline-block;
-                line-height: 2rem;
                 width: 100%;
-                li{
-                    color: @actionColor;
-                    float: left;
-                    list-style: disc;
-                    margin-left: 4%;
-                    a{
-                        color: @actionColor;
-                        text-decoration: underline;
-                    }
-                }
-                
             }
         }
-
+        .thumbnails{
+            li{
+                display: inline-block;
+                margin: 1rem;
+                &:first-child{
+                    margin-left: 0;
+                }
+                 &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .texto2{
+        display: inline;
+        margin: 2rem;
+        padding: 2rem;
+        
+    }
 }
+
+//.fotos{
+//    float: left;
+//    margin-left: 2.3%;
+//    width: 54%;
+//    .detailCatalog{
+//        width: 100%;
+//    }
+//    ul{
+//        li{
+//            float: left;
+//            margin: 0.5rem;
+//        }
+//    }
+//    
+//    
+//}
+//.textDetail{
+//    float: right;
+//    padding: 2rem;
+//    .textDetailTitle{
+//        .titleFont(2rem, darken(@mainColor,100));
+//    }
+//    .textDetailPrice{
+//        color:  fade(darken(@actionColor, 100),40);
+//        font-size: 1.1rem;
+//        font-weight: 800;
+//        line-height: 2.1em;
+//    }
+//    .download{
+//            p{
+//                clear: both;
+//                color: fade(darken(@actionColor, 100),40);
+//                font-style: italic;
+//                margin: 1rem 0;
+//                &:first-child{
+//                    
+//                    font-size: 1.1rem;
+//                    font-style: normal;
+//                    font-weight: 800;
+//                    line-height: 2.1em;
+//                }
+//            }
+//            ul{
+//                background-color: lighten(@backgroundColor, 5) ;
+//                display: inline-block;
+//                line-height: 2rem;
+//                width: 100%;
+//                li{
+//                    color: @actionColor;
+//                    float: left;
+//                    list-style: disc;
+//                    margin-left: 4%;
+//                    a{
+//                        color: @actionColor;
+//                        text-decoration: underline;
+//                    }
+//                }
+//                
+//            }
+//        }
+//    
+//        .submenu{    
+//            .button{
+//                .button(relative, 23%); 
+//                float: right;
+//                padding: 0;
+//                top: -1rem;
+//            }
+//            input{
+//                border: none;
+//                cursor: pointer;
+//                line-height: 2rem;
+//                padding-left: 1rem;
+//                width: 46.6%;
+//                &:first-child{margin-right: 1.5%;}
+//                
+//                &#cb1{
+//                    float: left;
+//                    margin-bottom: 20/16rem;
+//                    margin-top: -0.7rem;
+//                    margin-right: 1rem;
+//                    padding: 0%;
+//
+//                }
+//                &[type="checkbox"] {
+//                    display: block;
+//                    min-height: 19px;
+//                    height: 19px;
+//                    width: 19px;
+//
+//                }
+//                &:checked + label{
+//                                color: @actionColor;
+//                            }
+//
+//            }
+//            label{
+//                    float: left;
+//                    font-size: 85%;
+//                    position: relative;
+//                    top:-0.8rem;
+//                }
+//            textarea{
+//                border: none;
+//                margin: 22/16rem 0;
+//                min-height: 90/16rem;
+//                padding: 1rem;
+//                width: 95.4%;
+//            }
+//        }
+//        
+//}

@@ -25,9 +25,6 @@ a {
 a img {
   border: 0;
 }
-h1 {
-  font-size: 1.875rem;
-}
 :focus {
   outline: 0;
 }
@@ -40,17 +37,195 @@ ul {
 a {
   text-decoration: none;
 }
-.contactWrapper section {
-  border-bottom: 1px solid #a0a74a;
-  height: 12.5rem;
-  text-align: center;
+.contactByMail {
+  padding-top: 3.125rem;
+  width: 100%;
 }
-.contactWrapper section .contactTitle {
-  margin-top: 5rem;
+.contactByMail .button {
+  right: 7.7%;
+  top: -1.4rem;
+}
+.contactByMail input {
+  width: 40%;
+}
+.contactByMail input#cb1 {
+  float: left;
+  margin-bottom: 1.25rem;
+  margin-left: 8.3%;
+  margin-top: -0.7rem;
+  padding: 0%;
+}
+.contactByMail input[type="checkbox"] {
+  display: block;
+  background: #ffffff;
+  min-height: 19px;
+  height: 19px;
+  width: 19px;
+}
+.contactByMail input:checked + label {
+  color: #a0a74a;
+}
+.contactByMail label {
+  float: left;
+  position: relative;
+  top: -1.5rem;
+}
+.contactByMail textarea {
+  border: none;
+  margin: 1.375rem 0;
+  min-height: 5.625rem;
+  padding: 1rem;
+  width: 81.4%;
+}
+.freeCall form {
+  padding: 5rem 0;
+}
+.freeCall form input[type="tel"] {
+  width: 26%;
+}
+.freeCall form input[type="radio"] {
+  width: 1%;
+  display: inline;
+}
+.freeCall form input[type="radio"]:checked + label {
+  color: #a0a74a;
+}
+.freeCall form .button {
+  background: #a0a74a;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 7%;
+  right: 25%;
+  top: 0.1rem;
+}
+.freeCall form .freeCallMessage {
+  margin-top: 1rem;
+}
+.whereRWe .submenu {
+  padding-bottom: 0rem!important;
+}
+.whereRWe .submenu .imgMap {
+  display: inline;
+  width: 50%;
+  float: left;
+  height: 338px;
+  overflow: hidden;
+}
+.whereRWe .submenu .imgMap img {
+  width: 100%;
+}
+.whereRWe .submenu .formMap {
+  display: block;
+  float: right;
+  margin: 1.7rem 0;
+  width: 50%;
+}
+.whereRWe .submenu .formMap form {
+  width: 100%;
+}
+.whereRWe .submenu .formMap form input[type="text"] {
+  margin-bottom: 1.78rem;
+  width: 86%;
+}
+.whereRWe .submenu .formMap form p {
+  color: #000000;
+  margin-bottom: 1rem;
+  padding-left: 5%;
+  text-align: left;
   text-transform: uppercase;
 }
+.whereRWe .submenu .formMap form .formLeftSide {
+  float: left;
+  width: 50%;
+}
+.whereRWe .submenu .formMap form .formRightSide {
+  float: right;
+  width: 50%;
+}
+.whereRWe .submenu .formMap form .formRightSide .button {
+  right: 5%;
+  top: 0;
+  width: 23%;
+}
+.contactWrapper section {
+  border-bottom: 1px solid #a0a74a;
+  float: left;
+  line-height: 2.2rem;
+  min-height: 12.5rem;
+  padding: 6rem 0 0;
+  text-align: center;
+  width: 100%;
+}
+.contactWrapper section input {
+  border: none;
+  cursor: pointer;
+  min-height: 2.1875rem;
+  margin: 0 0.5%;
+  padding-left: 1rem;
+}
+.contactWrapper section .submenu {
+  background: #e9ebd2;
+  color: rgba(0, 0, 0, 0.4);
+  float: left;
+  display: none;
+  min-height: 17.25rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+.contactWrapper section .submenu .button {
+  background: #a0a74a;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 10%;
+  float: right;
+}
+@media screen and (max-width: 1024px) {
+  .contactWrapper section .submenu .button {
+    background: #a0a74a;
+    color: #ffffff;
+    display: inline-block;
+    padding: 0.5rem;
+    position: relative;
+    text-align: center;
+    width: 85%;
+    float: none;
+    margin: -1rem 0 0rem;
+    right: 0;
+  }
+}
+.contactWrapper section .contactTitle {
+  float: left;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  width: 100%;
+}
 .contactWrapper section .contactSubTitle {
-  line-height: 3.125rem;
+  margin-bottom: 0.5rem;
+}
+.contactWrapper section .accordionOpener {
+  cursor: pointer;
+}
+.contactWrapper section .plusSimbol {
+  color: #a0a74a;
+  display: inline-block;
+  font-size: 48px;
+  float: right;
+  position: relative;
+  text-align: right;
+  top: -4rem;
+  right: 8%;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .contactWrapper section .plusSimbol {
+    display: none;
+  }
 }
 footer {
   background: #000000;
@@ -144,7 +319,7 @@ footer .footerSiteInfoPages ul li select {
   }
 }
 .header {
-  background: #000000 url("../img/headerBottom.png") repeat-x 0 100%;
+  background: url("../img/headerBottom.png") repeat-x 0 100%;
   display: inline-block;
   min-height: 4.25rem;
   padding: 2em 0 0;
@@ -242,6 +417,9 @@ footer .footerSiteInfoPages ul li select {
   color: #a0a74a;
   padding: 0.5rem;
 }
+.show {
+  display: block!important;
+}
 @media screen and (min-width: 1024px) {
   .mobileNav {
     display: none;
@@ -250,35 +428,40 @@ footer .footerSiteInfoPages ul li select {
 @media screen and (max-width: 1024px) {
   .mobileNav ul {
     background: rgba(160, 167, 74, 0.9);
-    display: block;
-    right: 1rem;
-    margin: 2.1rem auto;
+    display: none;
+    margin: 2.1rem 0;
     position: absolute;
-    width: 30%;
+    width: 100%;
     z-index: 5;
   }
   .mobileNav ul li {
-    display: block;
     border-bottom: 1px solid rgba(199, 204, 139, 0.8);
+    display: block;
+    text-align: center;
   }
   .mobileNav ul li a {
-    line-height: 3rem;
-    padding: 1rem;
-    width: 100%;
     color: #000000;
     font-size: 1.2rem;
+    line-height: 3rem;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
   }
   .mobileNav .mobileNavIcon {
     background-image: url("../img/mobileMenuNav.png");
     background-color: #a0a74a;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
     display: inline-block;
     position: absolute;
     top: 1rem;
     right: 1rem;
     width: 50px;
     height: 50px;
+  }
+  .mobileNav .mobileNavIconClose {
+    background-image: url('../img/mobileMenuNavClose.png');
   }
 }
 .nav {
@@ -413,14 +596,14 @@ footer .footerSiteInfoPages ul li select {
 }
 .sectionImgProducts ul .box .imgOverProductInf .button {
   background: #a0a74a;
-  bottom: 7%;
   color: #ffffff;
   display: inline-block;
-  left: 7%;
   padding: 0.5rem;
   position: absolute;
-  text-align: center;
   width: 80%;
+  bottom: 7%;
+  left: 7%;
+  text-align: center;
 }
 .sectionImgProducts ul .box:hover {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -492,6 +675,187 @@ footer .footerSiteInfoPages ul li select {
 .servicesMainList ul li ul li:before {
   content: "-";
 }
+.sideNav {
+  background: #a0a74a;
+  display: block;
+  float: left;
+  margin-top: -2rem;
+  min-height: 87.5vh;
+  width: 14%;
+}
+.sideNav ul {
+  padding-top: 2rem;
+  width: 100%;
+}
+.sideNav ul li {
+  border-bottom: 1px solid rgba(143, 149, 66, 0.8);
+  text-align: center;
+  width: 100%;
+}
+.sideNav ul li a {
+  color: #ffffff;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+.sideNav ul li a.active {
+  color: #000000;
+}
+.sideNav ul li a:hover {
+  color: #000000;
+}
+.mainWrapperWithSideNav {
+  float: left;
+  width: 83.6%;
+}
+.mainWrapperWithSideNav .detailImgVideo {
+  background: #d4d4d4;
+  margin: 1.1rem 2%;
+  padding: 1.5rem;
+  width: 93.9%;
+}
+.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li {
+  float: left;
+}
+.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li:first-child {
+  margin-left: 2.25rem;
+}
+.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li:last-child a:after {
+  content: "";
+}
+.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li a {
+  color: #a0a74a;
+}
+.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li a:after {
+  content: ">";
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.mainWrapperWithSideNav .watchPresentation {
+  float: right;
+  margin-right: 0.5rem;
+}
+.mainWrapperWithSideNav .watchPresentation ul li {
+  float: left;
+  margin: 0 0.5rem;
+}
+.mainWrapperWithSideNav .watchPresentation ul li:first-child:after {
+  background: #a0a74a;
+  border-radius: 50%;
+  content: url("../img/presentationIcon.png");
+  height: 10px;
+  line-height: 1em;
+  margin: 0.5rem;
+  padding: 0.4rem;
+  width: 10px;
+}
+.mainWrapperWithSideNav .watchPresentation ul li a {
+  color: #000000;
+}
+.mainWrapperWithSideNav .watchPresentation ul li a.before {
+  background: #a0a74a;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 80%;
+  font-weight: 800;
+  height: 10px;
+  line-height: 1em;
+  padding: 0.4rem;
+  width: 10px;
+}
+.mainWrapperWithSideNav .watchPresentation ul li a.after {
+  background: #a0a74a;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 80%;
+  font-weight: 800;
+  height: 10px;
+  line-height: 1em;
+  padding: 0.4rem;
+  width: 10px;
+}
+.mainWrapperWithSideNav .watchPresentation ul li .ampliar::after {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+}
+.mainWrapperWithSideNav .socialMedia {
+  line-height: 2rem;
+}
+.mainWrapperWithSideNav .socialMedia .fb_iframe_widget {
+  display: inline-block;
+  float: left;
+  margin-left: 2%;
+  margin-right: 1%;
+  position: relative;
+  top: -0.6rem;
+}
+.mainWrapperWithSideNav .socialMedia .fb_iframe_widget .span {
+  height: 20px;
+}
+.mainWrapperWithSideNav .socialMedia #twitter-widget-0 {
+  display: inline-block;
+  height: 20px;
+  float: left;
+  margin-right: 1%;
+  position: relative;
+  top: 1.5px;
+  width: 69px!important;
+}
+.mainWrapperWithSideNav .socialMedia .g-plusone {
+  margin-right: 1rem;
+}
+.catalogDetail .breadcrumbs {
+  display: inline-block;
+}
+.catalogDetail .breadcrumbs ul li {
+  float: left;
+}
+.catalogDetail .breadcrumbs ul li:first-child {
+  margin-left: 2.25rem;
+}
+.catalogDetail .breadcrumbs ul li:last-child a:after {
+  content: "";
+}
+.catalogDetail .breadcrumbs ul li a {
+  color: #a0a74a;
+}
+.catalogDetail .breadcrumbs ul li a:after {
+  content: ">";
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
+.Contenedor {
+  display: inline-block;
+  padding: 0 2rem;
+}
+.Contenedor .fotos2 {
+  display: inline-block;
+  float: left;
+  width: 20%;
+}
+.Contenedor .fotos2 .mainmediafig2 img {
+  display: inline-block;
+  width: 100%;
+}
+.Contenedor .fotos2 .thumbnails li {
+  display: inline-block;
+  margin: 1rem;
+}
+.Contenedor .fotos2 .thumbnails li:first-child {
+  margin-left: 0;
+}
+.Contenedor .fotos2 .thumbnails li:last-child {
+  margin-right: 0;
+}
+.Contenedor .texto2 {
+  display: inline;
+  margin: 2rem;
+  padding: 2rem;
+}
 body {
   background: #ededed;
   font-family: 'Lato', sans-serif;
@@ -509,7 +873,7 @@ body h2 {
 .mainWrapper {
   display: block;
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
 }
 .mainWrapperTextSection {
   width: 100%;
