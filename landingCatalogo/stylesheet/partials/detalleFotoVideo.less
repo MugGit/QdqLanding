@@ -1,46 +1,4 @@
 //DetalleFotoVideo
-.sideNav{
-    background: @actionColor;
-    bottom: 0;
-    display: block;
-    height: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    position: absolute;
-    width: 14%;
-    ul{
-        padding-top: 2rem;
-        width: 100%;
-        li{
-            border-bottom: 1px solid fade(darken(@actionColor, 5), 80);
-            text-align: center;
-            width: 100%;
-            a{
-                color: lighten(@mainColor, 100%);
-                line-height: 3rem;
-                text-transform: uppercase;
-                &.active{color: darken(@mainColor, 100);}
-                &:hover{
-                    color: darken(@mainColor, 100);
-                }
-            }
-        }
-    }
-    @media screen and (max-width:1024px){
-        
-        height: 3rem;
-        margin: -1.4rem 0 1rem;
-        position: relative;
-        width: 100%;
-        content: "Opciones";
-        color: white;
-        ul{
-            display: none;
-        }
-        
-    } 
-}
 .mainWrapperWithSideNav{
     float: left;
     width: 83.6%;

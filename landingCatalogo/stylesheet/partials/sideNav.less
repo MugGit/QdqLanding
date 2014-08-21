@@ -1,0 +1,58 @@
+.sideNav{
+    background: @actionColor;
+    bottom: 0;
+    display: block;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 14%;
+    ul{
+        padding-top: 2rem;
+        width: 100%;
+        li{
+            border-bottom: 1px solid fade(darken(@actionColor, 5), 80);
+            text-align: center;
+            width: 100%;
+            a{
+                color: lighten(@mainColor, 100%);
+                line-height: 3rem;
+                text-transform: uppercase;
+                &.active{color: darken(@mainColor, 100);}
+                &:hover{
+                    color: darken(@mainColor, 100);
+                }
+            }
+        }
+    }
+    @media screen and (max-width:1024px){
+        
+        display: none;
+        
+    } 
+}
+
+.mobileSideNav{
+    background: @actionColor;
+    display: block;
+    height: 3rem;
+    margin: -1.4rem 0 1rem;
+    vertical-align: middle;
+    select{
+        background: @actionColor;
+        border: none;
+        .border-radius(0px);
+        height: 3rem;
+    vertical-align: middle;
+        width: 100%;
+        option{
+            border: none;
+            font-size: 1.5rem;
+        }
+    }
+    @media screen and (min-width:1024px){
+        
+        display: none;
+    }
+}
