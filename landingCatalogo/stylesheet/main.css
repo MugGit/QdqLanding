@@ -21,6 +21,7 @@ video {
 a {
   text-decoration: none;
   color: #a0a74a;
+  cursor: pointer;
 }
 a img {
   border: 0;
@@ -323,7 +324,9 @@ footer .footerSiteInfoPages ul li select {
   display: inline-block;
   min-height: 4.25rem;
   padding: 2em 0 0;
+  position: relative;
   width: 100%;
+  z-index: 5;
 }
 .header .logo {
   float: left;
@@ -677,10 +680,10 @@ footer .footerSiteInfoPages ul li select {
 }
 .sideNav {
   background: #a0a74a;
-  display: block;
+  display: inline-block;
   float: left;
-  margin-top: -2rem;
-  min-height: 87.5vh;
+  margin: -2rem 0;
+  padding-bottom: 100%;
   width: 14%;
 }
 .sideNav ul {
@@ -808,6 +811,13 @@ footer .footerSiteInfoPages ul li select {
 .mainWrapperWithSideNav .socialMedia .g-plusone {
   margin-right: 1rem;
 }
+.divEngloba {
+  display: inline-block;
+  z-index: 1;
+}
+.sideNav {
+  display: inline-block;
+}
 .catalogDetail .breadcrumbs {
   display: inline-block;
 }
@@ -829,32 +839,202 @@ footer .footerSiteInfoPages ul li select {
   vertical-align: middle;
 }
 .Contenedor {
-  display: inline-block;
+  display: block;
   padding: 0 2rem;
 }
 .Contenedor .fotos2 {
   display: inline-block;
   float: left;
-  width: 20%;
+  margin-right: 3%;
+  width: 60%;
 }
-.Contenedor .fotos2 .mainmediafig2 img {
+.Contenedor .fotos2 .mainMedia2 {
+  display: inherit;
+  text-align: center;
+}
+.Contenedor .fotos2 .mainMedia2 img {
+  width: 100%;
+}
+.Contenedor .fotos2 .mainMedia2 .ampliar {
   display: inline-block;
+  margin: 1.6rem 0 0.7rem;
+}
+.Contenedor .fotos2 .mainMedia2 .ampliar:after {
+  background: #a0a74a;
+  border-radius: 50%;
+  content: url("../img/presentationIcon.png");
+  height: 10px;
+  line-height: 1em;
+  margin: 0.5rem;
+  padding: 0.4rem;
+  width: 10px;
+}
+.Contenedor .fotos2 .thumbnails {
+  display: inline-block;
+  margin-left: 1.9%;
+  position: relative;
   width: 100%;
 }
 .Contenedor .fotos2 .thumbnails li {
-  display: inline-block;
-  margin: 1rem;
+  display: block;
+  float: left;
+  margin: 1.2rem 0.8%;
+  width: 29%;
+}
+.Contenedor .fotos2 .thumbnails li a {
+  color: #000000;
+}
+.Contenedor .fotos2 .thumbnails li a img {
+  width: 100%;
 }
 .Contenedor .fotos2 .thumbnails li:first-child {
   margin-left: 0;
+  margin-top: 44%;
+  width: 2%;
+}
+.Contenedor .fotos2 .thumbnails li:first-child a {
+  background: #a0a74a;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 80%;
+  font-weight: 800;
+  height: 10px;
+  padding: 0.4rem;
+  width: 10px;
 }
 .Contenedor .fotos2 .thumbnails li:last-child {
-  margin-right: 0;
+  margin-left: 0;
+  margin-top: 44%;
+  width: 2%;
 }
-.Contenedor .texto2 {
+.Contenedor .fotos2 .thumbnails li:last-child a {
+  background: #a0a74a;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 80%;
+  font-weight: 800;
+  height: 10px;
+  padding: 0.4rem;
+  width: 10px;
+}
+.Contenedor .texto2 .textDetailTitle {
+  margin-bottom: 1rem;
+}
+.Contenedor .texto2 .textDetailPrice {
+  color: #7e7d7d;
+  font-size: 1.1rem;
+}
+.Contenedor .texto2 p {
+  margin-bottom: 1rem;
+}
+.Contenedor .texto2 .download {
   display: inline;
-  margin: 2rem;
-  padding: 2rem;
+}
+.Contenedor .texto2 .download p {
+  clear: both;
+  color: rgba(0, 0, 0, 0.8);
+  display: inherit;
+  font-size: 80%;
+  font-style: italic;
+  margin: 1rem 0;
+}
+.Contenedor .texto2 .download p:first-child {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.1em;
+  margin: 0% 0% 1rem 0%;
+}
+.Contenedor .texto2 .download ul {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  line-height: 3rem;
+  white-space: nowrap;
+  text-align: center;
+  width: 36.8%;
+}
+.Contenedor .texto2 .download ul li {
+  color: #a0a74a;
+  display: inline-block;
+  list-style: disc;
+  margin-left: 4%;
+}
+.Contenedor .texto2 .download ul li a {
+  color: #a0a74a;
+  text-decoration: underline;
+}
+.Contenedor .texto2 .download .button {
+  background: #a0a74a;
+  color: #ffffff;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 11%;
+  display: inline-block;
+  padding: 0.9rem;
+  margin: 1rem 0% 1rem 0%;
+  text-transform: uppercase;
+}
+.Contenedor .texto2 form {
+  display: block;
+  margin: 1rem 0%;
+}
+.Contenedor .texto2 form .button {
+  background: #a0a74a;
+  color: #ffffff;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 11%;
+  display: inline-block;
+  padding: 0;
+  margin-left: 5.7%;
+}
+.Contenedor .texto2 form input {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2rem;
+  padding-left: 1rem;
+  width: 16.5%;
+}
+.Contenedor .texto2 form input:first-child {
+  margin-right: 1.5%;
+}
+.Contenedor .texto2 form input#cb1 {
+  float: left;
+  margin-bottom: 1.25rem;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+  padding: 0%;
+}
+.Contenedor .texto2 form input[type="checkbox"] {
+  display: block;
+  min-height: 19px;
+  height: 19px;
+  width: 19px;
+}
+.Contenedor .texto2 form input:checked + label {
+  color: #a0a74a;
+}
+.Contenedor .texto2 form label {
+  display: inline-block;
+  float: left;
+  font-size: 85%;
+  position: relative;
+}
+.Contenedor .texto2 form textarea {
+  border: none;
+  display: inline-block;
+  margin: 1.375rem 0;
+  min-height: 5.625rem;
+  padding: 1rem;
+  width: 34.8%;
 }
 body {
   background: #ededed;

@@ -1,5 +1,10 @@
 //Detalle Catalogo
-.sideNav{min-height: 95vh;}
+
+.divEngloba{
+    display: inline-block;
+    z-index: 1;
+}
+
 .catalogDetail{
     .breadcrumbs{
       display: inline-block;
@@ -33,7 +38,6 @@
         display: inline-block;
         float: left;
         margin-right: 3%;
-        min-height: 87vh;
         width: 60%;
         .mainMedia2{
             display: inherit;
@@ -56,48 +60,66 @@
         
         }
         .thumbnails{
-            margin-left: 1.9%;
-            position: absolute;
-            
-            
+            display: inline-block;
+            margin: 1% 0%;
+            overflow: hidden;
+            padding: 0;
+            width: 100%;
+
+                        
             li{
-                display: inline-block;
-                margin: 1.2rem 0.8rem;
-                a{color: darken(@mainColor,100)}
+                display: block;
+                float: left;
+                height: 200px;
+                margin: 0 1%;
+                overflow: hidden;
+                width: 29.5%;
+                a{color: darken(@mainColor,100);
+                    img{width: 100%;}
+                }
                 &:first-child{
-                    display: inline;
-                    margin-left: 0;
-                    margin-right: 1%;
-                    position: absolute;
-                    top: 36%;
-                    background: @actionColor;
-                        border-radius: 50%;
-                        color: lighten(@mainColor, 100);
-                        display: inline-block;
-                        font-family: @headerFont;
-                        font-size: 80%;
-                        font-weight: 800;
-                        height: 10px;
-                        left: -3%;
-                        line-height: 1em;
-                        padding: 0.4rem;
-                        width: 10px;
+                    display: inline-block;
+                    margin: 0;
+                    width: 2.5%;
+                    position: relative;
+                        a{
+                            background: @actionColor;
+                            border-radius: 50%;
+                            color: lighten(@mainColor, 100);
+                            display: inline-block;
+                            font-family: @headerFont;
+                            font-size: 80%;
+                            font-weight: 800;
+                            height: 10px;
+                            line-height: 96%;
+                            padding: 0.4rem;
+                            position: absolute;
+                            top: 40%;
+                            width: 10px;
+                            
+                        }
                 }
                  &:last-child{
-                    position: absolute;
-                    top: 36%;
-                    right: -5%;
-                     background: @actionColor;
-                        border-radius: 50%;
-                        color: lighten(@mainColor, 100);
-                        display: inline-block;
-                        font-family: @headerFont;
-                        font-size: 80%;
-                        font-weight: 800;
-                        height: 10px;
-                        line-height: 1em;
-                        padding: 0.4rem;
-                        width: 10px;
+                      margin: 0%;
+                      position: relative;
+                      width: 2.5%;
+                     
+                         a{
+                           background: @actionColor;
+                            border-radius: 50%;
+                            color: lighten(@mainColor, 100);
+                            display: inline-block;
+                            font-family: @headerFont;
+                            font-size: 80%;
+                            font-weight: 800;
+                            height: 10px;
+                            line-height: 96%;
+                            padding: 0.4rem;
+                            position: absolute;
+                            top: 40%;
+                            width: 10px;
+                            
+                        }
                 }
             }
         }
@@ -134,10 +156,9 @@
                 background-color: fade(darken(@mainColor, 100), 10) ;
                 display: inline-block;
                 line-height: 3rem;
-                margin-right: 1%;
                 white-space: nowrap;
                 text-align: center;
-                width: 36%;
+                width: 36.8%;
                 
                 
                 li{
