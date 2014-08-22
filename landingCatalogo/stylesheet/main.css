@@ -233,7 +233,9 @@ footer {
   color: #ffffff;
   display: inline-block;
   min-height: 3.1rem;
+  position: relative;
   width: 100%;
+  z-index: 7;
 }
 @media only screen and (max-width: 600px) {
   footer {
@@ -338,8 +340,8 @@ footer .footerSiteInfoPages ul li select {
   width: 40%;
 }
 @media screen and (max-width: 1200px) {
-  .header .logo {
-    font-size: 80%;
+  .header .logo h1 {
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -678,12 +680,44 @@ footer .footerSiteInfoPages ul li select {
 .servicesMainList ul li ul li:before {
   content: "-";
 }
+@media screen and (max-width: 1024px) {
+  .breadcrumbs {
+    font-size: 84%;
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
+.breadcrumbs ul li {
+  float: left;
+}
+.breadcrumbs ul li:first-child {
+  margin-left: 2.25rem;
+}
+@media screen and (max-width: 1024px) {
+  .breadcrumbs ul li:first-child {
+    margin-left: 0.3rem!important;
+  }
+}
+.breadcrumbs ul li:last-child a:after {
+  content: "";
+}
+.breadcrumbs ul li a {
+  color: #a0a74a;
+}
+.breadcrumbs ul li a:after {
+  content: ">";
+  margin: 0 0.3rem;
+  vertical-align: middle;
+}
 .sideNav {
   background: #a0a74a;
-  display: inline-block;
-  float: left;
-  margin: -2rem 0;
-  padding-bottom: 100%;
+  bottom: 0;
+  display: block;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
   width: 14%;
 }
 .sideNav ul {
@@ -706,42 +740,40 @@ footer .footerSiteInfoPages ul li select {
 .sideNav ul li a:hover {
   color: #000000;
 }
-.mainWrapperWithSideNav {
-  float: left;
-  width: 83.6%;
+@media screen and (max-width: 1200px) {
+  .sideNav {
+    display: none;
+  }
 }
-.mainWrapperWithSideNav .detailImgVideo {
+.mobileSideNav {
+  background: #a0a74a;
+  display: block;
+  height: 3rem;
+  margin: -1.4rem 0 1rem;
+  position: relative;
+  vertical-align: middle;
+  z-index: 3;
+}
+@media screen and (min-width: 1200px) {
+  .mobileSideNav {
+    display: none;
+  }
+}
+.detailImgVideo {
   background: #d4d4d4;
   margin: 1.1rem 2%;
   padding: 1.5rem;
   width: 93.9%;
 }
-.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li {
-  float: left;
-}
-.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li:first-child {
-  margin-left: 2.25rem;
-}
-.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li:last-child a:after {
-  content: "";
-}
-.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li a {
-  color: #a0a74a;
-}
-.mainWrapperWithSideNav .imgVideoDetail .breadcrumbs ul li a:after {
-  content: ">";
-  margin: 0 0.3rem;
-  vertical-align: middle;
-}
-.mainWrapperWithSideNav .watchPresentation {
+.watchPresentation {
   float: right;
   margin-right: 0.5rem;
 }
-.mainWrapperWithSideNav .watchPresentation ul li {
+.watchPresentation ul li {
   float: left;
   margin: 0 0.5rem;
 }
-.mainWrapperWithSideNav .watchPresentation ul li:first-child:after {
+.watchPresentation ul li:first-child:after {
   background: #a0a74a;
   border-radius: 50%;
   content: url("../img/presentationIcon.png");
@@ -751,10 +783,10 @@ footer .footerSiteInfoPages ul li select {
   padding: 0.4rem;
   width: 10px;
 }
-.mainWrapperWithSideNav .watchPresentation ul li a {
+.watchPresentation ul li a {
   color: #000000;
 }
-.mainWrapperWithSideNav .watchPresentation ul li a.before {
+.watchPresentation ul li a.before {
   background: #a0a74a;
   border-radius: 50%;
   color: #ffffff;
@@ -767,7 +799,7 @@ footer .footerSiteInfoPages ul li select {
   padding: 0.4rem;
   width: 10px;
 }
-.mainWrapperWithSideNav .watchPresentation ul li a.after {
+.watchPresentation ul li a.after {
   background: #a0a74a;
   border-radius: 50%;
   color: #ffffff;
@@ -780,15 +812,15 @@ footer .footerSiteInfoPages ul li select {
   padding: 0.4rem;
   width: 10px;
 }
-.mainWrapperWithSideNav .watchPresentation ul li .ampliar::after {
+.watchPresentation ul li .ampliar::after {
   cursor: pointer;
   width: 10px;
   height: 10px;
 }
-.mainWrapperWithSideNav .socialMedia {
+.socialMedia {
   line-height: 2rem;
 }
-.mainWrapperWithSideNav .socialMedia .fb_iframe_widget {
+.socialMedia .fb_iframe_widget {
   display: inline-block;
   float: left;
   margin-left: 2%;
@@ -796,10 +828,10 @@ footer .footerSiteInfoPages ul li select {
   position: relative;
   top: -0.6rem;
 }
-.mainWrapperWithSideNav .socialMedia .fb_iframe_widget .span {
+.socialMedia .fb_iframe_widget .span {
   height: 20px;
 }
-.mainWrapperWithSideNav .socialMedia #twitter-widget-0 {
+.socialMedia #twitter-widget-0 {
   display: inline-block;
   height: 20px;
   float: left;
@@ -808,15 +840,12 @@ footer .footerSiteInfoPages ul li select {
   top: 1.5px;
   width: 69px!important;
 }
-.mainWrapperWithSideNav .socialMedia .g-plusone {
+.socialMedia .g-plusone {
   margin-right: 1rem;
 }
 .divEngloba {
   display: inline-block;
   z-index: 1;
-}
-.sideNav {
-  display: inline-block;
 }
 .catalogDetail .breadcrumbs {
   display: inline-block;
@@ -842,11 +871,34 @@ footer .footerSiteInfoPages ul li select {
   display: block;
   padding: 0 2rem;
 }
+@media screen and (max-width: 1200px) {
+  .Contenedor {
+    width: 100%;
+    padding: 0 0rem;
+  }
+}
+.Contenedor .socialMedia {
+  width: 100%;
+  display: block;
+  margin: 3rem 0% 0%;
+}
+@media screen and (max-width: 1200px) {
+  .Contenedor .socialMedia {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
 .Contenedor .fotos2 {
   display: inline-block;
   float: left;
   margin-right: 3%;
   width: 60%;
+}
+@media screen and (max-width: 1200px) {
+  .Contenedor .fotos2 {
+    width: 100%;
+  }
 }
 .Contenedor .fotos2 .mainMedia2 {
   display: inherit;
@@ -869,17 +921,32 @@ footer .footerSiteInfoPages ul li select {
   padding: 0.4rem;
   width: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .Contenedor .fotos2 .mainMedia2 .ampliar {
+    display: none;
+  }
+}
 .Contenedor .fotos2 .thumbnails {
   display: inline-block;
-  margin-left: 1.9%;
-  position: relative;
+  margin: 1% 0%;
+  overflow: hidden;
+  padding: 0;
   width: 100%;
 }
 .Contenedor .fotos2 .thumbnails li {
   display: block;
   float: left;
-  margin: 1.2rem 0.8%;
-  width: 29%;
+  height: 200px;
+  margin: 0 1%;
+  overflow: hidden;
+  width: 29.5%;
+}
+@media screen and (max-width: 1200px) {
+  .Contenedor .fotos2 .thumbnails li {
+    height: auto;
+    margin: 0% 0.15%;
+    width: 33%;
+  }
 }
 .Contenedor .fotos2 .thumbnails li a {
   color: #000000;
@@ -888,9 +955,10 @@ footer .footerSiteInfoPages ul li select {
   width: 100%;
 }
 .Contenedor .fotos2 .thumbnails li:first-child {
-  margin-left: 0;
-  margin-top: 44%;
-  width: 2%;
+  display: inline-block;
+  margin: 0;
+  width: 2.5%;
+  position: relative;
 }
 .Contenedor .fotos2 .thumbnails li:first-child a {
   background: #a0a74a;
@@ -901,13 +969,21 @@ footer .footerSiteInfoPages ul li select {
   font-size: 80%;
   font-weight: 800;
   height: 10px;
+  line-height: 96%;
   padding: 0.4rem;
+  position: absolute;
+  top: 40%;
   width: 10px;
 }
+@media screen and (max-width: 1200px) {
+  .Contenedor .fotos2 .thumbnails li:first-child {
+    display: none;
+  }
+}
 .Contenedor .fotos2 .thumbnails li:last-child {
-  margin-left: 0;
-  margin-top: 44%;
-  width: 2%;
+  margin: 0%;
+  position: relative;
+  width: 2.5%;
 }
 .Contenedor .fotos2 .thumbnails li:last-child a {
   background: #a0a74a;
@@ -918,8 +994,16 @@ footer .footerSiteInfoPages ul li select {
   font-size: 80%;
   font-weight: 800;
   height: 10px;
+  line-height: 96%;
   padding: 0.4rem;
+  position: absolute;
+  top: 40%;
   width: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .Contenedor .fotos2 .thumbnails li:last-child {
+    display: none;
+  }
 }
 .Contenedor .texto2 .textDetailTitle {
   margin-bottom: 1rem;
@@ -958,11 +1042,22 @@ footer .footerSiteInfoPages ul li select {
   text-align: center;
   width: 36.8%;
 }
+@media screen and (max-width: 1200px) {
+  .Contenedor .texto2 .download ul {
+    width: 100%;
+  }
+}
 .Contenedor .texto2 .download ul li {
   color: #a0a74a;
   display: inline-block;
   list-style: disc;
   margin-left: 4%;
+}
+@media screen and (max-width: 1200px) {
+  .Contenedor .texto2 .download ul li {
+    font-size: 90%;
+    margin: 0% 2%;
+  }
 }
 .Contenedor .texto2 .download ul li a {
   color: #a0a74a;
@@ -983,6 +1078,7 @@ footer .footerSiteInfoPages ul li select {
 .Contenedor .texto2 form {
   display: block;
   margin: 1rem 0%;
+  width: 101%;
 }
 .Contenedor .texto2 form .button {
   background: #a0a74a;
@@ -993,7 +1089,13 @@ footer .footerSiteInfoPages ul li select {
   width: 11%;
   display: inline-block;
   padding: 0;
-  margin-left: 5.7%;
+  float: right;
+}
+@media screen and (max-width: 1200x) {
+  .Contenedor .texto2 form .button {
+    float: right;
+    margin-left: 0%;
+  }
 }
 .Contenedor .texto2 form input {
   border: none;
@@ -1003,8 +1105,26 @@ footer .footerSiteInfoPages ul li select {
   padding-left: 1rem;
   width: 16.5%;
 }
+@media screen and (max-width: 570px) {
+  .Contenedor .texto2 form input {
+    margin-bottom: 1rem;
+    width: 96%;
+  }
+}
+@media screen and (min-width: 570px) and (max-width: 1200px) {
+  .Contenedor .texto2 form input {
+    margin: 0;
+    padding: 0;
+    width: 49.7%;
+  }
+}
 .Contenedor .texto2 form input:first-child {
   margin-right: 1.5%;
+}
+@media screen and (max-width: 1200px) {
+  .Contenedor .texto2 form input:first-child {
+    margin-right: 0;
+  }
 }
 .Contenedor .texto2 form input#cb1 {
   float: left;
@@ -1036,6 +1156,13 @@ footer .footerSiteInfoPages ul li select {
   padding: 1rem;
   width: 34.8%;
 }
+@media screen and (max-width: 1200px) {
+  .Contenedor .texto2 form textarea {
+    margin: 1rem 0;
+    padding: 0;
+    width: 99.7%;
+  }
+}
 body {
   background: #ededed;
   font-family: 'Lato', sans-serif;
@@ -1066,6 +1193,17 @@ body h2 {
     width: 95%;
     padding: 1rem 2%;
     text-align: justify;
+  }
+}
+.mainWrapperWithSideNav {
+  float: left;
+  width: 83.6%;
+  margin-left: 14%;
+}
+@media screen and (max-width: 1200px) {
+  .mainWrapperWithSideNav {
+    margin: 0 2%;
+    width: 96%;
   }
 }
 .fullBackground {

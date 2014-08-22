@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Landing Catalogo</title>
     <link rel="stylesheet/less" href="stylesheet/main.less">
+    <link rel="stylesheet/less" type="text/less" href="stylesheet/Vendors/allVendors.less" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Playfair+Display' rel='stylesheet' type='text/css'>
     <!-- Scripts------->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
@@ -53,14 +54,16 @@
     </div>    
     </header>
     <nav class="mobileSideNav">
-        <select>
-          <option value="all">Todos</option>
-          <option value="category1">Categor&iacute;a1</option>
-          <option value="category2">Categor&iacute;a2</option>
-          <option value="category3">Categor&iacute;a3</option>
-          <option value="category4">Categor&iacute;a4</option>
-          <option value="category5">Categor&iacute;a5</option>
-        </select>
+        <section>
+				<select class="cs-select cs-skin-border">
+					<option value="" disabled selected>Todos</option>
+					<option value="cat1">Categoria1</option>
+					<option value="cat2">Categoria2</option>
+					<option value="cat3">Categoria3</option>
+					<option value="cat4">Categoria4</option>
+					<option value="cat5">Categoria5</option>
+				</select>
+			</section>
     </nav>
    <div class="divEngloba">
           <nav class="sideNav">
@@ -168,6 +171,15 @@
          
         </div>
     </footer>
+    <script src="js/classie.js"></script>
+		<script src="js/selectFx.js"></script>
+		<script>
+			(function() {
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx(el);
+				} );
+			})();
+		</script>
     </body>
 </html>  
    

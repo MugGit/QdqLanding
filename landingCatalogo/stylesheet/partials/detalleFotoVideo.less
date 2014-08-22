@@ -1,43 +1,13 @@
 //DetalleFotoVideo
-.mainWrapperWithSideNav{
-    float: left;
-    width: 83.6%;
-    margin-left: 14%;
-    @media screen and (max-width:1024px){
-        margin-left: 0%;
-        width: 100%;
-    }
+
     .detailImgVideo{
         background: darken(@backgroundColor, 10);
         margin: 1.1rem 2%;
         padding: 24/16rem;
         width: 93.9%;
     }
-    .imgVideoDetail{
-        .breadcrumbs{
-            
-            ul{
-                li{
-                    float: left;
-                    &:first-child{margin-left: 36/16rem;}
-                    &:last-child{
-                        a{
-                            &:after{content: "";}
-                        }
-                    }
-                    a{
-                        color: @actionColor;
-                        &:after{
-                            content: ">";
-                            margin: 0 0.3rem;
-                            vertical-align: middle;
-                        }
-
-                    }
-                }
-            }
-        }
-    }
+    
+           
     .watchPresentation{
         float: right;
         margin-right: 0.5rem;
@@ -104,6 +74,7 @@
             margin-right: 1%;
             position: relative;
             top:-0.6rem;
+           
             .span{
                 height: 20px;
             }
@@ -122,5 +93,3 @@
         }
         
     }
-    
-}

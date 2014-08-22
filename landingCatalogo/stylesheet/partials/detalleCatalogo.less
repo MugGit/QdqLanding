@@ -34,11 +34,28 @@
 .Contenedor{
     display: block;
     padding: 0 2rem;
+    @media screen and (max-width:1200px){
+        width: 100%;
+        padding: 0 0rem;
+    }
+    .socialMedia{
+         width: 100%;
+        display: block;
+        margin: 3rem 0% 0%;
+         @media screen and (max-width:1200px){
+            display: inline-block;
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
     .fotos2{
         display: inline-block;
         float: left;
         margin-right: 3%;
         width: 60%;
+        @media screen and (max-width:1200px){
+            width: 100%;
+        }
         .mainMedia2{
             display: inherit;
             text-align: center;
@@ -56,6 +73,9 @@
                         padding: 0.4rem;
                         width: 10px;
                     }
+            @media screen and (max-width:1200px){
+                display: none;
+            }
         }
         
         }
@@ -74,6 +94,11 @@
                 margin: 0 1%;
                 overflow: hidden;
                 width: 29.5%;
+                @media screen and (max-width:1200px){
+                    height: auto;
+                    margin: 0% 0.15%;        
+                    width: 33%;
+                    }
                 a{color: darken(@mainColor,100);
                     img{width: 100%;}
                 }
@@ -96,8 +121,10 @@
                             position: absolute;
                             top: 40%;
                             width: 10px;
-                            
                         }
+                    @media screen and (max-width:1200px){
+                        display: none;
+                    }
                 }
                  &:last-child{
                       margin: 0%;
@@ -118,8 +145,10 @@
                             position: absolute;
                             top: 40%;
                             width: 10px;
-                            
-                        }
+                         }
+                     @media screen and (max-width:1200px){
+                        display: none;
+                    }
                 }
             }
         }
@@ -159,6 +188,9 @@
                 white-space: nowrap;
                 text-align: center;
                 width: 36.8%;
+                @media screen and (max-width:1200px){
+                        width: 100%;
+                    }
                 
                 
                 li{
@@ -166,6 +198,10 @@
                     display: inline-block;
                     list-style: disc;
                     margin-left: 4%;
+                    @media screen and (max-width:1200px){
+                        font-size: 90%;
+                        margin: 0% 2%;
+                    }
                     a{
                         color: @actionColor;
                         text-decoration: underline;
@@ -184,11 +220,16 @@
         form{
             display: block;
             margin: 1rem 0%;
+            width: 101%;
         .button{
                 .button(relative, 11%);
                 display: inline-block;
                 padding: 0;
-                margin-left: 5.7%;
+                float: right;
+            @media screen and (max-width:1200x){
+                        float: right;
+                        margin-left: 0%;
+                    }
              }
             input{
                 border: none;
@@ -197,7 +238,20 @@
                 line-height: 2rem;
                 padding-left: 1rem;
                 width: 16.5%;
-                &:first-child{margin-right: 1.5%;}
+                 @media screen and (max-width:570px){
+                        margin-bottom: 1rem;                        
+                        width: 96%;
+                    }
+                @media screen and (min-width:570px) and (max-width:1200px){
+                    margin: 0;
+                    padding: 0;
+                    width: 49.7%;
+                    }
+                &:first-child{margin-right: 1.5%;
+                @media screen and (max-width:1200px){
+                        margin-right: 0;
+                    }
+                }
                 
                 &#cb1{
                     float: left;
@@ -233,8 +287,14 @@
                 min-height: 90/16rem;
                 padding: 1rem;
                 width: 34.8%;
+                @media screen and (max-width:1200px){
+                        margin: 1rem 0;
+                        padding: 0;
+                        width: 99.7%;
+                    }
             }
         }
     }
 }
+
 

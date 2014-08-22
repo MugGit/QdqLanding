@@ -1,0 +1,34 @@
+ 
+
+.breadcrumbs{
+            @media screen and (max-width:1024px){
+                font-size: 84%;
+                margin: 1rem 0;
+                width: 100%;
+            }
+            ul{
+                li{
+                    float: left;
+                    &:first-child{
+                        margin-left: 36/16rem;
+                        @media screen and (max-width:1024px){
+                            margin-left: 0.3rem!important;
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            &:after{content: "";}
+                        }
+                    }
+                    a{
+                        color: @actionColor;
+                        &:after{
+                            content: ">";
+                            margin: 0 0.3rem;
+                            vertical-align: middle;
+                        }
+
+                    }
+                }
+            }
+        }
