@@ -1,0 +1,46 @@
+
+.conocenos{
+    .mainTextSection{
+        width: 50.2%;
+        padding-left: 3%;
+        padding-right: 6%;
+        @media screen and (max-width:600px){
+            margin-bottom: 1rem;
+            padding: 0;
+            width: 100%;
+            
+        }
+    }
+    address{
+        font-style: normal;
+        p{
+            &:first-child{
+                color: lighten(@mainColor, 60);
+                margin-top: -1rem;
+            }
+        }
+    }
+    .listCategory{
+        width: 18%;
+        margin-bottom: 1rem;
+        @media screen and (max-width:600px){
+           width: 100%;
+           
+            
+        }
+        @media screen and (min-width:600px) and (max-width:1024px){
+            
+            width: 38%;
+            
+        }
+        .openTime{
+            color: lighten(@mainColor, 60);
+            margin-top: -1rem;
+        }
+    }
+    .mapaConocenos{
+        width: 100%;
+        margin-top: 3.8rem;
+        margin-bottom: 3rem;
+    }
+}

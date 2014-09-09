@@ -163,7 +163,7 @@ a {
 .contactWrapper section input {
   border: none;
   cursor: pointer;
-  min-height: 2.1875rem;
+  line-height: 2.1875rem;
   margin: 0 0.5%;
   padding-left: 1rem;
 }
@@ -227,6 +227,150 @@ a {
   .contactWrapper section .plusSimbol {
     display: none;
   }
+}
+.conocenos .mainTextSection {
+  width: 50.2%;
+  padding-left: 3%;
+  padding-right: 6%;
+}
+@media screen and (max-width: 600px) {
+  .conocenos .mainTextSection {
+    margin-bottom: 1rem;
+    padding: 0;
+    width: 100%;
+  }
+}
+.conocenos address {
+  font-style: normal;
+}
+.conocenos address p:first-child {
+  color: #999999;
+  margin-top: -1rem;
+}
+.conocenos .listCategory {
+  width: 18%;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .conocenos .listCategory {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .conocenos .listCategory {
+    width: 38%;
+  }
+}
+.conocenos .listCategory .openTime {
+  color: #999999;
+  margin-top: -1rem;
+}
+.conocenos .mapaConocenos {
+  width: 100%;
+  margin-top: 3.8rem;
+  margin-bottom: 3rem;
+}
+.couponWrapper {
+  height: 82vh;
+  margin-top: 1rem;
+}
+.couponWrapper .coupon {
+  background: #2e2e2e;
+  border-radius: 2px;
+  float: left;
+  height: 275px;
+  padding: 1rem;
+  width: 550px;
+}
+@media screen and (max-width: 600px) {
+  .couponWrapper .coupon {
+    height: 137.5px;
+    width: 275px;
+  }
+}
+.couponWrapper .coupon .couponContent {
+  border: 2px dashed #a0a74a;
+  float: left;
+  height: 240px;
+  padding: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .couponWrapper .coupon .couponContent {
+    height: 102.5px;
+    width: 240px;
+  }
+}
+.couponWrapper .coupon .couponContent p {
+  float: left;
+  color: #fff;
+  font-style: italic;
+  font-size: 79%;
+  margin: 1rem 8%;
+}
+.couponWrapper .coupon .couponContent p:first-child {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.couponWrapper .coupon .couponContent p:first-child span {
+  color: #a0a74a;
+  font-size: 6rem;
+  font-weight: bolder;
+  margin: 4.2rem 16%;
+  display: inline-block;
+  font-style: normal;
+}
+@media screen and (max-width: 600px) {
+  .couponWrapper .coupon .couponContent p:first-child span {
+    font-size: 3rem;
+    margin: 2.2rem 8%;
+  }
+}
+.couponWrapper .coupon .couponContent p:last-child {
+  clear: both;
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .couponWrapper .coupon .couponContent p:last-child {
+    font-size: 0.5rem;
+    margin-top: -1rem;
+  }
+}
+.couponWrapper .coupon .couponContent .productDiscount {
+  width: 54%;
+  margin-top: 2.6rem;
+  margin-left: 9.6%;
+  color: white;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1em;
+  margin-right: 0;
+}
+@media screen and (max-width: 600px) {
+  .couponWrapper .coupon .couponContent .productDiscount {
+    margin-top: -3.9rem;
+    margin-left: 46.6%;
+    font-size: 0.8rem;
+  }
+}
+.couponWrapper .couponPrintOptions {
+  background-color: #e7e4e3;
+  float: left;
+  height: 291px;
+  margin-left: 2px;
+  text-align: center;
+  padding-top: 1rem;
+  width: 25%;
+}
+.couponWrapper .couponPrintOptions img {
+  margin: 0 1%;
+}
+.couponWrapper .couponPrintOptions .activeIcon {
+  opacity: 0.4;
 }
 footer {
   background: #000000;
@@ -524,7 +668,7 @@ footer .footerSiteInfoPages ul li select {
 }
 @media only screen and (min-width: 1280px) {
   .sectionImgProducts ul li:first-child {
-    min-height: 21.5vw;
+    min-height: 22.5vw;
   }
 }
 .sectionImgProducts ul li img {
@@ -1197,6 +1341,7 @@ body h2 {
 }
 .mainWrapperWithSideNav {
   float: left;
+  min-height: 84.2vh;
   width: 83.6%;
   margin-left: 14%;
 }
