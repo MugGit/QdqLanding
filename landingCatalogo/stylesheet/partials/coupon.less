@@ -1,134 +1,59 @@
-.mixinCoupon(@width){
-    
-      background:#2e2e2e;
-      border-radius: 2px;
-      float: left;
-      height: @width/2.5 ;
-      padding: 1rem;
-      width: @width;
-      @media screen and (max-width:600px){
-            height: @width/5;
-            width: @width/2;
-                
-      }
-    
-     
-      
-      .couponContent{
-          border: 2px dashed @actionColor;
-          float: left;
-          height: (@width/2.5)-35px;
-          padding: 1rem;
-          @media screen and (max-width:600px){
-            height: (@width/5)-35px;
-            padding: 0;
-            width: (@width/2)-35px;
-                
-      }
-          p{
-              float: left;
-              color: #fff;
-              font-style: italic;
-              font-size: 79%;
-              margin: 1rem 8%;
-              &:first-child{
-                  color: lighten(@mainColor,100);
-                  text-transform: uppercase;
-                  margin: 0;
-                  span{
-                      color: @actionColor;
-                      font-size: 6rem;
-                      font-weight: bolder;
-                      margin: 4.2rem 16%;
-                      display: inline-block;
-                      font-style: normal;
-                      @media screen and (max-width:600px){
-                        font-size: 3rem;
-                        margin: 2.2rem 8%;    
-                
-      }
-                  }
-              }
-             &:last-child{
-                 clear: both;
-                 font-size: 0.9rem;
-                 margin: 0;
-                 text-align: center;
-                 width: 100%;
-                 @media screen and (max-width:600px){
-                   font-size: 0.5rem;
-                   margin-top: -1rem;
-                
-      }
-             }
-          }
-          .productDiscount{
-              width: 54%;
-              margin-top: 2.6rem;
-              margin-left: 9.6%;
-              color: white;
-              text-transform: uppercase;
-              font-style: normal;
-              font-size: 1.6rem;
-              line-height: 1em;
-              margin-right: 0;
-              @media screen and (max-width:600px){
-                margin-top: -3.9rem;
-                margin-left: 46.6%;
-                font-size: 0.8rem;
-                
-      }
-          }
-      }
-    
-}
-
-.couponWrapper{
-    
-    height: 82vh;
-    margin-top: 1rem;
-    .coupon{
-        float: left;
-        .mixinCoupon(550px);
-        @media screen and (max-width:1024px){
-        margin-right: 1%;
-        
-    }
-    }
-    .couponPrintOptions{
-    background-color: #e7e4e3;
+.couponDetailLeftSide{
+    display: inline-block;
     float: left;
-    height: 217px;    
-    margin-left: 2px;
-    text-align: center;
-    padding-top: 2.2rem;
-    width: 25%;
-    @media screen and (max-width:1024px){
-        margin: 0;
-        width: 100%;
-    }
-    img{
-        cursor: pointer;
-        margin: 0 1%;
-    }
-    .activeIcon{
-        opacity: 0.4;
-    }
-    form{
-        margin-top: 1rem;
-    input{
-        line-height: 2rem;
+    margin: 0 5%;
+    width: 50%;
+    .couponBlackBackg{
         width: 50%;
     }
-        .button{
-            .button(relative, 51%);
-            line-height: 1rem;
-            margin: 0.5rem 0;
-    }
-    }
-        p{
-            font-size: 90%;
-            margin-top: 1em;
+    .couponPrintOptions{
+        background: #e9e5e4;
+        display: block;
+        float: left;
+        margin-left: -1.5%;
+        margin-top: 0.8rem;
+        padding: 2%;
+        width: 35%;
+        
+        ul{
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            width: 70%;
+            li{
+                float: left;
+                margin: 0 6%;
+            }
+        }
+        .active{
+            opacity: 0.4;
+        }
+        .couponToggleForms{
+            float: left;
+            margin-bottom: -0.8rem;
+            margin-top: 1rem;
+            p{
+                font-size: 71%;
+                font-style: italic;
+                margin: 1em 0;
+            }
+            form{
+                display: inline-block;
+                margin: 0 1%;
+                text-align: center;
+                width: 99%;
+                
+                input{
+                    line-height: 2em;
+                    margin: 0.2rem auto;
+                    width: 97%;
+                }
+                .button{
+                    .button(relative, 100%);
+                    line-height: 1em;
+                    
+                }
+            }
         }
     }
 }

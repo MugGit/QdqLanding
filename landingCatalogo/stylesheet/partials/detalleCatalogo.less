@@ -1,7 +1,7 @@
 //Detalle Catalogo
 
 .divEngloba{
-    display: inline-block;
+    display: block;
     z-index: 1;
 }
 
@@ -19,6 +19,8 @@
                     }
                     a{
                         color: @actionColor;
+                        font-size: 1.2rem;
+                        line-height: 2em;
                         &:after{
                             content: ">";
                             margin: 0 0.3rem;
@@ -52,7 +54,7 @@
         display: inline-block;
         float: left;
         margin-right: 3%;
-        width: 60%;
+        width: 60.1%;
         @media screen and (max-width:1200px){
             width: 100%;
         }
@@ -79,6 +81,7 @@
         }
         
         }
+        
         .thumbnails{
             display: inline-block;
             margin: 1% 0%;
@@ -155,6 +158,7 @@
       
     }
     .texto2{
+        
         .textDetailTitle{margin-bottom: 1rem;}
         .textDetailPrice{
             color: #7e7d7d;
@@ -215,17 +219,19 @@
                 padding: 0.9rem;
                 margin: 1rem 0% 1rem 0%;
                 text-transform: uppercase;
+                
             }
         }
         form{
             display: block;
             margin: 1rem 0%;
-            width: 101%;
+            width: 100%;
         .button{
                 .button(relative, 11%);
                 display: inline-block;
                 padding: 0;
                 float: right;
+                
             @media screen and (max-width:1200x){
                         float: right;
                         margin-left: 0%;
