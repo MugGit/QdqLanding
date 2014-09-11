@@ -379,6 +379,133 @@ body {
   margin-top: 3.8rem;
   margin-bottom: 3rem;
 }
+.couponDetailLeftSide {
+  display: inline-block;
+  float: left;
+  margin: 0 0 0 3.9%;
+  width: 50%;
+}
+.couponDetailLeftSide .couponBlackBackg {
+  width: 50%;
+}
+.couponDetailLeftSide .couponPrintOptions {
+  background: #e9e5e4;
+  display: block;
+  float: left;
+  margin-left: -1.5%;
+  margin-top: 0.8rem;
+  padding: 2%;
+  width: 35%;
+}
+.couponDetailLeftSide .couponPrintOptions ul {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+}
+.couponDetailLeftSide .couponPrintOptions ul li {
+  float: left;
+  margin: 0 6%;
+}
+.couponDetailLeftSide .couponPrintOptions .active {
+  opacity: 0.4;
+}
+.couponDetailLeftSide .couponPrintOptions .couponToggleForms {
+  float: left;
+  margin-bottom: -0.8rem;
+  margin-top: 1rem;
+}
+.couponDetailLeftSide .couponPrintOptions .couponToggleForms p {
+  font-size: 71%;
+  font-style: italic;
+  margin: 1em 0;
+}
+.couponDetailLeftSide .couponPrintOptions .couponToggleForms form {
+  display: inline-block;
+  margin: 0 1%;
+  text-align: center;
+  width: 99%;
+}
+.couponDetailLeftSide .couponPrintOptions .couponToggleForms form input {
+  line-height: 2em;
+  margin: 0.2rem auto;
+  width: 97%;
+}
+.couponDetailLeftSide .couponPrintOptions .couponToggleForms form .button {
+  background: #a0a74a;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  line-height: 1em;
+}
+.couponDetailLeftSide .printCouponInstruction {
+  float: left;
+  font-size: 90.7%;
+  margin-left: 1.5%;
+  margin-top: 1.2em;
+  text-align: center;
+  width: 93.1%;
+}
+.couponDetailRightSide {
+  float: left;
+  margin: 0.6rem 0 0 0;
+  width: 44%;
+}
+.couponDetailRightSide p {
+  margin: 1em 0;
+}
+.couponBlackBackg {
+  background: #333;
+  float: left;
+  margin: 1.5%;
+  padding: 2%;
+  width: 26%;
+}
+.couponBlackBackg .couponDashedBackg {
+  border: 1px dashed #a0a74a;
+  padding: 2%;
+  width: 96%;
+}
+.couponBlackBackg .couponDashedBackg .couponDiscountText {
+  color: #ffffff;
+  display: block;
+  line-height: 1.2em;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  width: 63%;
+}
+.couponBlackBackg .couponDashedBackg .couponDiscountText span {
+  color: #a0a74a;
+  display: block;
+  float: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 4.375rem;
+  font-weight: bold;
+  margin-top: 0.3em;
+  margin-right: 5%;
+}
+.couponBlackBackg .couponDashedBackg .couponDate {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-style: italic;
+  margin: 2em 0;
+  text-align: center;
+  width: 100%;
+}
+.couponBlackBackg .couponDashedBackg .button {
+  background: #a0a74a;
+  color: #ffffff;
+  display: inline-block;
+  padding: 0.5rem;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: 1rem auto;
+}
 .divEngloba {
   display: block;
   z-index: 1;
@@ -431,7 +558,7 @@ body {
   display: inline-block;
   float: left;
   margin-right: 3%;
-  width: 56%;
+  width: 60.1%;
 }
 @media screen and (max-width: 1200px) {
   .Contenedor .fotos2 {
@@ -543,9 +670,6 @@ body {
     display: none;
   }
 }
-.Contenedor .texto2 {
-  padding-right: 4%;
-}
 .Contenedor .texto2 .textDetailTitle {
   margin-bottom: 1rem;
 }
@@ -619,7 +743,7 @@ body {
 .Contenedor .texto2 form {
   display: block;
   margin: 1rem 0%;
-  width: 101%;
+  width: 100%;
 }
 .Contenedor .texto2 form .button {
   background: #a0a74a;
@@ -631,7 +755,6 @@ body {
   display: inline-block;
   padding: 0;
   float: right;
-  right: 2%;
 }
 @media screen and (max-width: 1200x) {
   .Contenedor .texto2 form .button {
@@ -985,6 +1108,11 @@ footer .footerSiteInfoPages ul li select {
   color: #a0a74a;
   padding: 0.5rem;
 }
+.fotoVideoListItem {
+  float: left;
+  margin: 1% 2.5%;
+  width: 20%;
+}
 .show {
   display: block!important;
 }
@@ -1064,7 +1192,7 @@ footer .footerSiteInfoPages ul li select {
   display: block;
   float: right;
   text-align: left;
-  width: 37%;
+  width: 36.5%;
 }
 @media screen and (max-width: 1200px) {
   .newsText {
@@ -1098,6 +1226,30 @@ footer .footerSiteInfoPages ul li select {
     display: inline-block;
     margin-top: 2rem;
   }
+}
+.paginator {
+  float: left;
+  width: 100%;
+}
+.paginator ul {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.paginator ul li {
+  margin: 2rem 44%;
+}
+.paginator ul li a {
+  background-color: #a0a74a;
+  background-position: center center;
+  border-radius: 50%;
+  color: #fff;
+  float: left;
+  line-height: 20px;
+  margin: 0 3%;
+  padding: 5px;
+  text-align: center;
+  width: 20px;
 }
 .sectionImgProducts {
   display: inline-block;
