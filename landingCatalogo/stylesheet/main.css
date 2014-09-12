@@ -1227,6 +1227,44 @@ footer .footerSiteInfoPages ul li select {
     margin-top: 2rem;
   }
 }
+.newsPicture {
+  float: left;
+  margin-right: 2%;
+}
+.latestNewFullWidth {
+  float: left;
+  width: 75%;
+  margin-bottom: 3em;
+}
+.latestNewFullWidth .newsTitle {
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  margin-bottom: 0.7em;
+  font-family: 'Playfair Display', serif;
+}
+.latestNewFullWidth .newsDate {
+  color: #666666;
+  font-style: italic;
+  margin-bottom: 2em;
+}
+.latestNewFullWidth p {
+  line-height: 1.2em;
+  margin: 1em 0;
+}
+.latestNewFullWidth p:last-child {
+  margin-bottom: 3em;
+}
+.latestNewFullWidth .keepReading {
+  text-decoration: underline;
+}
+hr {
+  display: block;
+  border-style: inset;
+  border-width: 2px;
+  clear: both;
+  opacity: 0.3;
+  width: 100%;
+}
 .paginator {
   float: left;
   width: 100%;
@@ -1237,7 +1275,7 @@ footer .footerSiteInfoPages ul li select {
   text-align: center;
 }
 .paginator ul li {
-  margin: 2rem 44%;
+  margin: 2rem 43%;
 }
 .paginator ul li a {
   background-color: #a0a74a;
@@ -1441,7 +1479,7 @@ footer .footerSiteInfoPages ul li select {
   height: auto;
   left: 0;
   right: 0;
-  top: 0;
+  top: 3rem;
   position: absolute;
   width: 14%;
 }
