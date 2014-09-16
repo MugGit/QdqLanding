@@ -23,4 +23,10 @@ $(document).ready(function(){
             $("span.plusSimbol", $section).html('-');
  
    });//accordionOpener end
+    
+  $(".fotoVideoListItem").hover(function(){
+  $(".fotoVideoItemInfo", this).toggleClass('show',1000);
+});
+ 
+    
 });//Document ready end
