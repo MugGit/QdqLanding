@@ -73,8 +73,8 @@
         </div>
     <div class="couponPrintOptions">
         <ul>
-            <li><a href=""><img src="img/envelopeIcon.png" alt="Enviar cupon por email" class="active"></a></li>
-            <li><a href=""><img src="img/mobileIcon.png" alt="Enviar cupon al movil"></a></li>
+            <li><a href=""><img src="img/envelopeIcon.png" alt="Enviar cupon por email" class="mailClickOpenForm active"></a></li>
+            <li><a href=""><img src="img/mobileIcon.png" alt="Enviar cupon al movil" class="smsClickOpenForm"></a></li>
             <li><a href=""><img src="img/printIcon.png" alt=""></a></li>
         </ul>
         <div class="couponToggleForms">
@@ -83,11 +83,27 @@
                 <input type="text" placeholder="Email">
                 <input type="submit" class="button">
                 </form>
+                <p>Tu direcci&oacute;n de correo electr&oacute;nico no ser&aacute; publicada ni almacenada</p>
             </div>
-            <p>Tu direcci&oacute;n de correo electr&oacute;nico no ser&aacute; publicada ni almacenada</p>
+            
         </div>
+        <div class="couponToggleForms">
+            <div class="couponSMSForm">
+               <form action="">
+                 <input type="tel" name="userTelephone" placeholder="888888888" class="userTelephone">
+                  <input type="radio" name="language">
+                  <label for="languageSpanish">Espa&ntilde;ol</label> 
+                  <input type="radio" name="language">
+                  <label for="languagePortugues">Portugues</label>
+                      <input type="submit" value="Enviar" class="button"></input>
+                </form>
+                 <p class="printCouponInstruction">Presentando el SMS en la tienda tendrás derecho al descuento.</p>          
+            </div>
+            
+        </div>
+        
     </div>
-    <p class="printCouponInstruction">Puedes imprimir tu cupón o descargarlo en tu móvil como SMS. Presentandolo en la tienda tendrás automaticamente derecho al descuento.</p>
+     
     </div>
     <div class="couponDetailRightSide">
         <p>Oferta en Productos de mercería. 10% de descuento en productos de mercería al detall.</p>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Top Bar Slide Notification</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet/less" href="stylesheet/main.less">
+        <link rel="stylesheet/less" type="text/less" href="stylesheet/Vendors/allVendors.less" />
+        <link href='http://fonts.googleapis.com/css?family=Lato|Playfair+Display' rel='stylesheet' type='text/css'>
+		
+        <!-- Scripts------->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+        <script src="js/less-1.7.0.min.js"></script>
+        <script src="js/ScriptQdq.js"></script>
+         <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
+        <script src="https://apis.google.com/js/platform.js" async defer>
+          {lang: 'es'}
+        </script>
+        <script src="js/modernizr.custom.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->   
+    </head>
+	<body class="color-5">
+	<header class="header">
+      <nav class="mobileNav">
+           <span class="mobileNavIcon"></span>
+            <ul>
+                <li><a href="" class="active">Portada</a></li>
+                <li><a href="">Con&oacute;cenos</a></li>
+                <li><a href="">Que hacemos</a></li>
+                <li><a href="">Catalogo</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+       <div class="mainWrapper">
+        <div class="logo"><h1>Paloma Primera Infancia</h1></div>
+         
+        <nav class="nav">
+            <ul>
+                <li><a href="" class="active">Portada</a></li>
+                <li><a href="">Con&oacute;cenos</a></li>
+                <li><a href="">Que hacemos</a></li>
+                <li><a href="">Catalogo</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>    
+    </header>
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="main clearfix">
+				<div class="column">
+
+					<button id="notification-trigger" class="progress-button">
+						<span class="content">Show Error</span>
+						<span class="progress"></span>
+					</button>
+					<button id="notification-triggerOK" class="progress-button">
+						<span class="content">Show OK</span>
+						<span class="progress"></span>
+					</button>
+				</div>
+
+			</div>
+			
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/notificationFx.js"></script>
+		<script>
+			(function() {
+				var bttn = document.getElementById( 'notification-trigger' );
+                var bttn2 = document.getElementById( 'notification-triggerOK' );
+
+				// make sure..
+				bttn.disabled = false;
+                bttn2.disabled = false;
+
+				bttn.addEventListener( 'click', function() {
+					// simulate loading (for demo purposes only)
+					classie.add( bttn, 'active' );
+					setTimeout( function() {
+
+						classie.remove( bttn, 'active' );
+						
+						// create the notification
+						var notification = new NotificationFx({
+							message : '<span class="icon icon-megaphone"></span><p>Error 1</p>',
+							layout : 'bar',
+							effect : 'slidetop',
+							type : 'error', // notice, warning or error
+							onClose : function() {
+								bttn.disabled = false;
+							}
+						});
+
+						// show the notification
+						notification.show();
+
+					}, 1200 );
+					
+					// disable the button (for demo purposes only)
+					this.disabled = true;
+				} );
+                
+                bttn2.addEventListener( 'click', function() {
+					// simulate loading (for demo purposes only)
+					classie.add( bttn2, 'active' );
+					setTimeout( function() {
+
+						classie.remove( bttn2, 'active' );
+						
+						// create the notification
+						var notification = new NotificationFx({
+							message : '<span class="icon icon-bulb"></span><p>Everything OK 1</p>',
+							layout : 'bar',
+							effect : 'slidetop',
+							type : 'success', // notice, warning or error
+							onClose : function() {
+								bttn2.disabled = false;
+							}
+						});
+
+						// show the notification
+						notification.show();
+
+					}, 1200 );
+					
+					// disable the button (for demo purposes only)
+					this.disabled = true;
+				} );
+                
+			})();
+		</script>
+	</body>
+</html>

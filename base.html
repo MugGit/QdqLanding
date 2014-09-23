@@ -1,0 +1,167 @@
+{% load staticfiles i18n compress csrfhacks %}
+<!DOCTYPE html>
+<html lang="{{LANGUAGE_CODE}}" class="{% block html-class %}{% endblock %}">
+<head>
+    <meta charset="UTF-8">
+    {% block seo %}
+        <title>{% block seo-title %}Qdq media{% endblock %}</title>
+        <meta name="description" content="{% block seo-description %}{% endblock %}">
+        <meta name="author" content="">
+    {% endblock %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    {# Base styles. Use {{ block.super }} in extended templates #}
+    {% block external-css %}
+        <link href='http://fonts.googleapis.com/css?family=Muli:300,400|Oswald:400,300|Oxygen' rel='stylesheet' type='text/css'>
+    {% endblock %}
+    {% block css %}
+        {% compress css %}
+            <link href="{% static 'css/styles.less' %}" rel="stylesheet" type="text/less">
+        {% endcompress %}
+    {% endblock %}
+</head>
+<body class="{% block body-class %}{% endblock %}">
+
+{#        <img src="https://clientes.qdq.com/?set-csrftoken={{ csrf_token }}&hmac={% sign csrf_token %}"/>#}
+
+        {% block body %}
+        {# Overlay user for authentication #}
+        <div class="overlay" id="eqform">
+            <div class="background-circle">
+                <div class="blackLoginCircle">
+                    <em>{% trans "Identificate" %}</em>
+
+                    <img src="{% eq_csrf %}" style="display: none"/>
+                    <form action="{{ settings.EQ_LOGIN }}" autocomplete="on" class="formularioAcceso" method="POST">
+                        <input id="firstname" class="userName" name="username" type="text"
+                               placeholder="Nombre usuario"
+                        />
+                        <br/>
+                        <input id="password" class="password" name="password" type="password"
+                               placeholder="Contraseña"
+                        />
+                        <br/>
+                        <input type="submit" value="Entrar">
+                        {% csrf_token %}
+                    </form>
+                    <a href="{{ settings.EQ_LOSTPASSWORD }}" title="¿Olvidaste tu contraseña o no tienes todavía?"
+                       class="passwordReminder">¿Olvidaste tu contraseña o no tienes todavía?</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="mailform">
+            <div class="background-circle">
+                <div class="blackLoginCircle">
+                    <em>{% trans "Identificate" %}</em>
+
+                    <form action="{{ settings.MAIL_LOGIN }}" autocomplete="on" class="formularioAcceso">
+                        <input id="firstname" class="userName" name="kerio_username" type="text"
+                               placeholder="Nombre usuario"
+                        />
+                        <br/>
+                        <input id="password" class="password" name="kerio_password" type="password"
+                               placeholder="Contraseña"
+                        />
+                        <br/>
+                        <input type="submit" value="Entrar">
+                        <input name="next" value="/" type="hidden">
+                    </form>
+                    <!-- a href="{{ settings.MAIL_LOSTPASSWORD }}" title="¿Olvidaste tu contraseña o no tienes todavía?"
+                       class="passwordReminder">¿Olvidaste tu contraseña o no tienes todavía?</a -->
+                </div>
+            </div>
+        </div>
+
+        {# Menu navigation #}
+        <header>
+            <nav class="mainMenu">
+                <div class="wrapper">
+                    <div class="navContainer">
+                        <ul class="linksContainer">
+                            <li class="{% block logo-class %}{% endblock %}">
+                                <a href="{% url 'home' %}"
+                                   title="QDQ express">
+                                    <img src="{% static "img/qdqexpress-header.png" %}" alt="logotipo QDQ express"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'home' %}"
+                                   title="Inicio"
+                                   class="{% block navigation-home %}{% endblock %}">
+                                    INICIO
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about-us' %}"
+                                   title="Quienes Somos"
+                                   class={% block navigation-about %}{% endblock %}>
+                                    QUIENES SOMOS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'services' %}"
+                                   title="Servicios"
+                                   class={% block navigation-services %}{% endblock %}>
+                                    SERVICIOS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}"
+                                   title="Contacto"
+                                   class={% block navigation-contact %}{% endblock %}>
+                                    CONTACTO
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="rightLinksContainer">
+                            <li>
+                                <a href="javascript:void(0);"
+                                   title="Tu Correo"
+                                   class="openIdentification"
+                                   data-overlay="#mailform"
+                                >
+                                    TU CORREO
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"
+                                   title="Tu Web"
+                                   class="openIdentification"
+                                   data-overlay="#eqform"
+                                >
+                                    TU WEB
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    {# Define a block for content personalization #}
+    {% block content %}
+    {% endblock %}
+    {# Footer #}
+    {% block footer %}
+        <footer>
+            <div class="wrapper">
+                <address>QDQ media Palácio Sotto Mayor. Rua Sousa Martins, 1 1069-316 Lisboa</address>
+                <div class="logosFooter">
+                    <a href="" title="QDQ media"><img src="{% static 'img/qdqmedia-mini.png' %}" alt="QDQ Media"></a>
+                    <a href="" title="Trazada"><img src="{% static "img/trazada-mini.png" %}" alt="Trazada"></a>
+                    <a href="" title="OptimizaClick"><img src="{% static "img/optimizaclick-mini.png" %}"
+                                                          alt="OptimizaClick"></a>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+    {# Load default javascript, use {{ block.super }} in extended templates #}
+    {% compress js %}
+        <script src="{%  static "js/jquery.min.js" %}"></script>
+        <script src="{%  static "js/placeholder-simple.js" %}"></script>
+        <script src="{% static "js/custom.js" %}"></script>
+    {% endcompress %}
+        {% block js %}
+        {%  endblock %}
+    {% endblock %}
+    </body>
+</html>

@@ -27,6 +27,20 @@ $(document).ready(function(){
   $(".fotoVideoListItem").hover(function(){
   $(".fotoVideoItemInfo", this).toggleClass('show',1000);
 });
+    
+  $(".mailClickOpenForm").click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $(".couponMailForm").show("fast");
+      $(".couponSMSForm").hide("slow");
+});
+    
+     $(".smsClickOpenForm").click(function(e){
+         e.preventDefault();
+         e.stopPropagation();
+        $(".couponMailForm").hide("fast"); 
+        $(".couponSMSForm").show("slow");
+});
  
     
 });//Document ready end
