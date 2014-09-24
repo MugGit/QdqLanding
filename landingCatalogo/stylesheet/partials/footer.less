@@ -1,15 +1,21 @@
 //footer
 
+
 footer{
     background: darken(@mainColor, 100%);
     color: lighten(@mainColor, 100%);
     display:inline-block;
-    min-height: 3.1rem;
-    position: relative;
+    height: 53px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     width: 100%;
     z-index: 7;
-    @media only screen and (max-width: 600px){
-    min-height: 20rem;
+    @media only screen and (max-width:750px){
+    height: 212px;
+    }
+    @media only screen and (min-width:750px)  and (max-width: 1200px){
+    height: 106px;
     }
     section{
         float: left;
@@ -56,9 +62,9 @@ footer{
             }
             li{
                 
-                @media only screen and (max-width: 600px){
-                width: 100%;    
-                }
+//                @media only screen and (max-width: 600px){
+//                width: 100%;    
+//                }
                 
             a{
                 margin-left:1rem;

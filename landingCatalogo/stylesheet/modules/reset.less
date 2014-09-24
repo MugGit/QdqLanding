@@ -29,3 +29,16 @@ a{
 }
 ul{list-style: none;}
 a{text-decoration: none;}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 53px; /* bottom = footer height */
+    @media only screen and (max-width:750px){
+    margin-bottom: 212px;
+    }
+    @media only screen and (min-width:750px)  and (max-width: 1200px){
+    margin-bottom: 106px;
+    }
+}

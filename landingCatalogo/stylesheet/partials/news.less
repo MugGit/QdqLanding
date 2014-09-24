@@ -1,0 +1,36 @@
+.newsText{
+    display: block;
+    float: right;
+    text-align: left;
+    width: 37%;
+    @media screen and (max-width:1200px){
+        width: 100%;
+    }
+    
+    .newsTitle{
+        font-size: 30/16rem;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+    }
+    .newsDate{
+        color: lighten(@mainColor, 40);
+        font-style: italic;
+        margin-bottom: 2em;
+    }
+    p{
+        line-height: 1.2em;
+        margin: 0.6em 0;
+        &:last-child{
+            margin-bottom: 2em;
+        }
+    }
+}
+.newsSocialMedia{
+    width: 100%;
+    display: block;
+    margin: 3rem 0% 0%;
+    @media screen and (max-width:1200px){
+        display: inline-block;
+        margin-top: 2rem;
+        }
+}

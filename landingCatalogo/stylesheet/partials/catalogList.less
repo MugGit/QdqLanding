@@ -1,0 +1,52 @@
+.catalogList{
+    display: block;
+    margin-bottom: 5rem;
+    margin-top: -4rem;
+    width: 100%;
+    .itemWhiteBackg{
+        background: #fff;
+        display: inline-block;
+        float: left;
+        margin-bottom: 1rem;
+        margin-right: 2%;
+        padding: 0 1%;
+        width: 29%;
+        @media screen and (max-width:900px){
+        width: 96%;
+        }
+        @media screen and (min-width:900px) and (max-width:1200px){
+        width: 46%;
+        }
+        img{
+        float: left;
+        margin: 2%;
+        width: 34%;
+        }
+        .itemTextWrapper{
+            display: block;
+            float: left;
+            width: 62%;
+        }
+        .itemTitle{
+            .titleFont(24/16rem,lighten(@mainColor, 30) );
+            margin-top: 2%;
+        }
+        
+        .itemText{
+            margin: 2% 0;
+        }
+        .button{
+        background: @actionColor;    
+        color: #fff;    
+        float: left;
+        line-height: 2em;
+        margin:0 2% 2%;
+        text-align: center;
+        width: 96%;
+        }
+    }
+    .activeItem{
+            .itemTitle{color: @actionColor;}
+            .itemText{color: lighten(@mainColor, 60);}
+        }
+}
