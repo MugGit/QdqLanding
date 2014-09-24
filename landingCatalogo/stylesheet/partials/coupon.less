@@ -1,0 +1,129 @@
+.couponDetailLeftSide{
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 3.9%;
+    width: 50%;
+    @media screen and (max-width:1000px){
+            width:90%;
+        }
+    .couponBlackBackg{
+        width: 50%;
+        @media screen and (max-width:1600px){
+            width:90%;
+        }
+    }
+    .couponPrintOptions{
+        background: #e9e5e4;
+        display: block;
+        float: left;
+        margin-left: -1.5%;
+        margin-top: 0.8rem;
+        padding: 2%;
+        width: 35%;
+        @media screen and (max-width:1600px){
+            margin-left: 1%;
+            width:90%;
+        }
+        
+        ul{
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            width: 70%;
+            @media screen and (max-width:1600px){
+            width:50%;
+        }
+            li{
+                float: left;
+                margin: 0 6%;
+                width: 44px;
+                
+                &:hover{
+                    border-radius: 50%;
+                    height: 44px;
+                    width: 44px;
+                }
+            }
+        }
+        .active{
+            opacity: 0.4;
+            &:hover{opacity: 1;}
+        }
+        .couponToggleForms{
+            float: left;
+            margin-bottom: -0.8rem;
+            margin-top: 1rem;
+            width: 100%;
+            p{
+                font-size: 71%;
+                font-style: italic;
+                margin: 1em 0;
+                text-align: center;
+            }
+            form{
+                display: inline-block;
+                margin: 0 1%;
+                text-align: center;
+                width: 99%;
+                
+                input{
+                    line-height: 2em;
+                    margin: 0.2rem auto;
+                    width: 97%;
+                    @media screen and (max-width:1600px){
+                        margin-left: 1%;
+                        width:100%;
+                    }
+                    &[type="radio"]{
+                        margin: 1em;
+                        width: 10%;
+                        
+                    }
+                    &:checked + label{
+                            color: @actionColor;
+                        }
+                    
+                }
+                .button{
+                    .button(relative, 100%);
+                    line-height: 1em;
+                    
+                }
+            }
+        }
+    }
+    .couponMailForm{
+        display: block;
+    }
+    .couponSMSForm{
+        display: none;
+    }
+    .printCouponInstruction{
+        float: left;
+        font-size: 90.7%;
+        margin-left: 1.5%;
+        margin-top: 1.2em;
+        text-align: center;
+        width: 100%;
+    }
+}
+.couponDetailRightSide{
+   float: left;
+   margin: 0.6rem 0 0 0; 
+   width: 44%;
+    @media screen and (max-width:1000px){
+        text-align: center;
+        width:90%;
+            
+        }
+    p{
+        margin: 1em 0;
+    }
+}
+
+.socialMedia{
+@media screen and (max-width:1000px){
+    margin: 0 auto;;        
+    width:35%;
+        }
+}

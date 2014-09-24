@@ -18,13 +18,14 @@
             border-bottom: 1px solid fade(lighten(@actionColor, 20),80);
             display: block;
             text-align: center;
-            a{
+            a{ 
             color: darken(@mainColor, 100);
             font-size: 1.2rem;
             line-height: 3rem;
             padding: 1rem;
             text-align: center;    
             width: 100%;
+                &:hover{color:@actionColor;}
             }
             
         }
@@ -33,7 +34,7 @@
     }
     .mobileNavIcon{
         background-image: url("../img/mobileMenuNav.png");
-        background-color: #a0a74a;
+        background-color: @actionColor;
         background-position: center;
         background-repeat: no-repeat;
         cursor: pointer;
@@ -68,6 +69,7 @@
             a{
                 color: lighten(@mainColor, 50%);
                 text-transform: uppercase;
+                &:hover{color:@actionColor;}
                 &.active{color: @actionColor;}
                 @media screen and (max-width:1200px){
                     font-size: 80%;

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado Catalogo</title>
+    <link rel="stylesheet/less" href="stylesheet/main.less">
+    <link rel="stylesheet/less" type="text/less" href="stylesheet/Vendors/allVendors.less" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Playfair+Display' rel='stylesheet' type='text/css'>
+    <!-- Scripts------->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="js/less-1.7.0.min.js"></script>
+<script src="js/ScriptQdq.js"></script>
+<script src="js/modernizr-2.6.2.min.js"></script>
+ <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'es'}
+</script>   
+</head>
+<body>
+   <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=219291498224447&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <header class="header">
+      <nav class="mobileNav">
+           <span class="mobileNavIcon"></span>
+            <ul class="navItems">
+                <li><a href="" class="active">Portada</a></li>
+                <li><a href="">Con&oacute;cenos</a></li>
+                <li><a href="">Que hacemos</a></li>
+                <li><a href="">Catalogo</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+       <div class="mainWrapper">
+        <div class="logo"><h1>Paloma Primera Infancia</h1></div>
+         <nav class="nav">
+            <ul>
+                <li><a href="">Portada</a></li>
+                <li><a href="" class="active">Con&oacute;cenos</a></li>
+                <li><a href="">Que hacemos</a></li>
+                <li><a href="">Catalogo</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>    
+    </header>
+    <nav class="mobileSideNav">
+        <section>
+				<select class="cs-select cs-skin-border">
+					
+					<option value="cat1">P&aacute;ginas</option>
+					<option value="cat2">Fotos</option>
+					<option value="cat3">Videos</option>
+					<option value="cat5">Noticias</option>
+					<option value="cat6">Blogging</option>
+				</select>
+			</section>
+    </nav>
+   <div class="englobador">
+       <div class="component">
+                      
+                       <div class="cn-wrapper" id="cn-wrapper">
+                           <ul>
+                             <li><a href="#"><span class="icon-picture"></span>Noticias</a></li>
+                             <li><a href="#"><span class="icon-headphones">s</span>P&aacute;gina</a></li>
+                             <li><a href="#"><span class="icon-home"></span>Blog</a></li>
+                             <li><a href="#"><span class="icon-facetime-video"></span>Video</a></li>
+                             <li><a href="#"><span class="icon-envelope-alt"></span>Fotos</a></li>
+                             
+                            </ul>
+                       </div>
+                       <div id="cn-overlay" class="cn-overlay"></div>
+                       
+                   </div>
+   </div>
+              
+        <footer class="footer">
+           <div class="mainWrapper">
+            <section class="footerCustomerInfo">
+                <ul>
+                    <li>Calle de Abastos, 10 28300 Aranjuez - (Madrid)</li>
+                    <li>91 028 20 46 / 665 88 88 88 -</li>
+                    <li><a href="">www.clienteweb.es</a></li>
+                </ul>
+            </section>
+            <section class="footerSiteInfoPages">
+               
+                <ul>
+                   <li><select name="languages">
+                    <option value="espanol">Español</option>
+                    <option value="catalan">Catalan</option>
+                    <option value="espanol">Español</option>
+                    <option value="catalan">Catalan</option>
+         
+                    </select></li>
+                    <li><a href="">mapa web</a></li>
+                    <li><a href="">pol&iacute;tica de cookies</a></li>
+                    <li><a href="">aviso legal</a></li>
+                    
+                </ul>
+            </section>
+         
+        </div>
+    </footer>
+    <script src="js/polyfills.js"></script>
+		<script src="js/demo1.js"></script>
+    <script src="js/classie.js"></script>
+		<script src="js/selectFx.js"></script>
+		<script>
+			(function() {
+				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+					new SelectFx(el);
+				} );
+			})();
+		</script>
+    </body>
+</html>  
+   

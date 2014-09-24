@@ -1,0 +1,32 @@
+.cn-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    ul{
+        li{
+            background: red;
+            display: block;
+            height: 200px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 200px;
+                &:first-child{
+                    top: -211px;
+                    left: -172px;
+                
+                }
+                +li{
+                    background:purple;
+                    top: -12px;
+                    left: 28px;
+                    +li{
+                        background: yellow;
+                        top: -5px;
+                        left: 25px;
+                        
+                    }
+                }
+           }
+    }
+}

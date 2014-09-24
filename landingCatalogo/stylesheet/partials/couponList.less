@@ -1,0 +1,44 @@
+.couponBlackBackg{
+    background: #333;
+    float: left;
+    margin: 1.5%;
+    padding: 2%;
+    width: 26%;
+    .couponDashedBackg{
+        border: 1px dashed @actionColor;
+        padding: 2%;
+        width: 96%;
+        .couponDiscountText{
+            color: lighten(@mainColor, 100);
+            display: block;
+            line-height: 1.2em;
+            margin: 1rem auto;
+            text-transform: uppercase;
+            width: 63%;
+            span{
+                color: @actionColor;
+                display: block;
+                float: left;
+                font-family: @bodyFont;
+                font-size: 70/16rem;
+                font-weight: bold;
+                margin-top: 0.3em;
+                margin-right: 5%;
+            }
+           
+        }
+         .couponDate{
+                color: lighten(@mainColor, 100);
+                font-size: 14/16rem;
+                font-style: italic;
+                margin: 2em 0;
+                text-align: center;
+                width: 100%;
+        }
+        .button{
+            .button(relative, 50%); 
+            display: block;
+            margin: 1rem auto;
+        }
+    }
+}
